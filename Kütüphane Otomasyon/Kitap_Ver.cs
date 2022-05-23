@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Kütüphane_Otomasyonu__bu_son_
 {
@@ -21,6 +22,26 @@ namespace Kütüphane_Otomasyonu__bu_son_
         {
             maskedTextBox1.Text = dateTimePicker1.Value.ToString();
             //maskedTextBox2.Text = Convert.ToString(Convert.ToInt32(maskedTextBox1.Text)+15);
+        }
+
+        MySqlConnection conn = new MySqlConnection("SERVER=172.21.54.3;DATABASE=GT2MTE;UID=GT2MTE;PWD=G9m5m1t2e357.");
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            MySqlCommand mySqlCommand = new MySqlCommand("insert into OgrenciKitap (ogrid,kitapid,verilentarih) values (@p1,@p2,@p3)",conn);
+            mySqlCommand.Parameters.AddWithValue("@p1",Convert.ToInt32(ogrno.Text));
+            mySqlCommand.Parameters.AddWithValue("@p2",Convert.ToInt32(kitapno.Text));
+            mySqlCommand.Parameters.AddWithValue("@p3",dateTimePicker1.Value);
+            //mySqlCommand.Parameters.AddWithValue("@p4",maskedTextBox2.Text);
+            mySqlCommand.ExecuteNonQuery();
+            conn.Close();
+
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("update Kitap set kitapdurum=1 where kitapid=@p1",conn);
+            cmd.Parameters.AddWithValue("@p1",Convert.ToInt32(kitapno.Text));
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Kitap Verildi");
         }
     }
 }

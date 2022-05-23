@@ -29,21 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.kitapno = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ogrno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,15 +54,13 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.maskedTextBox2);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.kitapno);
             this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.ogrno);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -73,6 +69,37 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Ver";
+            // 
+            // button3
+            // 
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(190, 230);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 79);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Barkod Okut";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(303, 288);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Ek Tarih Ver";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(428, 288);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Kitap Ver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // maskedTextBox2
             // 
@@ -92,12 +119,12 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Kitap No:";
             // 
-            // textBox3
+            // kitapno
             // 
-            this.textBox3.Location = new System.Drawing.Point(65, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(470, 23);
-            this.textBox3.TabIndex = 11;
+            this.kitapno.Location = new System.Drawing.Point(65, 174);
+            this.kitapno.Name = "kitapno";
+            this.kitapno.Size = new System.Drawing.Size(470, 23);
+            this.kitapno.TabIndex = 11;
             // 
             // maskedTextBox1
             // 
@@ -136,12 +163,12 @@
             this.dateTimePicker1.TabIndex = 6;
             this.dateTimePicker1.Visible = false;
             // 
-            // textBox2
+            // ogrno
             // 
-            this.textBox2.Location = new System.Drawing.Point(303, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 23);
-            this.textBox2.TabIndex = 5;
+            this.ogrno.Location = new System.Drawing.Point(303, 203);
+            this.ogrno.Name = "ogrno";
+            this.ogrno.Size = new System.Drawing.Size(232, 23);
+            this.ogrno.TabIndex = 5;
             // 
             // label2
             // 
@@ -152,22 +179,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = ":Öğrenci No";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Kitap Ad:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(65, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 23);
-            this.textBox1.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -176,36 +187,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(470, 143);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(428, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Kitap Ver";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(303, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Ek Tarih Ver";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(190, 232);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 79);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Barkod Okut";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // Kitap_Ver
             // 
@@ -230,15 +211,13 @@
         private Label label4;
         private Label label3;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
+        private TextBox ogrno;
         private Label label2;
-        private Label label1;
-        private TextBox textBox1;
         private PictureBox pictureBox1;
         private MaskedTextBox maskedTextBox1;
         private MaskedTextBox maskedTextBox2;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox kitapno;
         private Button button3;
         private Button button2;
         private Button button1;
