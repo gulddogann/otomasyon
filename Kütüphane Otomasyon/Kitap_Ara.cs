@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Kütüphane_Otomasyonu__bu_son_
 {
-    public partial class Kitap_Al : Form
+    public partial class Kitap_Ara : Form
     {
-        public Kitap_Al()
+        public Kitap_Ara()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

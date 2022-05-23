@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Al";
             // 
+            // button3
+            // 
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(190, 232);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Barkod Okut";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -75,6 +85,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Kitap Al";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // maskedTextBox2
             // 
@@ -150,16 +161,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(470, 143);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(190, 232);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Barkod Okut";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // Kitap_Al
             // 

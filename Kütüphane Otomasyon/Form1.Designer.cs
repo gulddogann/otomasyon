@@ -40,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.ogrkayıt);
             this.groupBox1.Controls.Add(this.kitapal);
             this.groupBox1.Controls.Add(this.kitapver);
@@ -133,7 +135,7 @@
             this.kayıtol.ForeColor = System.Drawing.SystemColors.ControlText;
             this.kayıtol.Location = new System.Drawing.Point(6, 126);
             this.kayıtol.Name = "kayıtol";
-            this.kayıtol.Size = new System.Drawing.Size(191, 33);
+            this.kayıtol.Size = new System.Drawing.Size(92, 33);
             this.kayıtol.TabIndex = 0;
             this.kayıtol.Text = "Personel Kayıt";
             this.kayıtol.UseVisualStyleBackColor = true;
@@ -180,6 +182,17 @@
             this.textBox1.Size = new System.Drawing.Size(181, 23);
             this.textBox1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(104, 126);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 33);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Kitap Ara";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -212,5 +225,6 @@
         private Button button1;
         private Label label1;
         private TextBox textBox1;
+        private Button button2;
     }
 }

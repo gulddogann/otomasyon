@@ -53,5 +53,11 @@ namespace Kütüphane_Otomasyonu__bu_son_
         {
                
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Kitap_Ara kitap_Ara = new Kitap_Ara();
+            kitap_Ara.Show();
+        }
     }
 }
