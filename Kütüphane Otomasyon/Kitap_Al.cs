@@ -33,6 +33,7 @@ namespace Kütüphane_Otomasyonu__bu_son_
             command.Parameters.AddWithValue("@p1",Convert.ToInt32(textBox3.Text));
             command.ExecuteNonQuery();
             conn.Close();
+            MessageBox.Show("Kitap Alındı");
 
         }
     }

@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.kitapno = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,13 +48,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.kitapno);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -69,6 +67,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Ver";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(303, 259);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(232, 23);
+            this.dateTimePicker2.TabIndex = 16;
             // 
             // button3
             // 
@@ -101,15 +106,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(303, 259);
-            this.maskedTextBox2.Mask = "00/00/0000 90:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(232, 23);
-            this.maskedTextBox2.TabIndex = 13;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -125,17 +121,6 @@
             this.kitapno.Name = "kitapno";
             this.kitapno.Size = new System.Drawing.Size(470, 23);
             this.kitapno.TabIndex = 11;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.maskedTextBox1.Location = new System.Drawing.Point(303, 232);
-            this.maskedTextBox1.Mask = "00/00/0000 90:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.ReadOnly = true;
-            this.maskedTextBox1.Size = new System.Drawing.Size(232, 23);
-            this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
@@ -161,7 +146,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(232, 23);
             this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.Visible = false;
             // 
             // ogrno
             // 
@@ -214,12 +198,11 @@
         private TextBox ogrno;
         private Label label2;
         private PictureBox pictureBox1;
-        private MaskedTextBox maskedTextBox1;
-        private MaskedTextBox maskedTextBox2;
         private Label label5;
         private TextBox kitapno;
         private Button button3;
         private Button button2;
         private Button button1;
+        private DateTimePicker dateTimePicker2;
     }
 }

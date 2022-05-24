@@ -27,15 +27,16 @@ namespace Kütüphane_Otomasyonu__bu_son_
             mailMessage.Body = richTextBox1.Text;
 
             SmtpClient smtpClient = new SmtpClient();
-            smtpClient.Credentials = new System.Net.NetworkCredential(textBox1.Text,"newyork70");
+            smtpClient.Credentials = new System.Net.NetworkCredential(textBox1.Text,"matyknvMSTOO0");
             smtpClient.Port = 587;
-            smtpClient.Host = "smtp.gmail.com";
+            //smtpClient.Host = "smtp.gmail.com"*/;
+            smtpClient.Host = textBox1.Text;
             object o = mailMessage;
 
             try
             {
-                smtpClient.SendAsync(mailMessage, (object)mailMessage);
-                //smtpClient.Send(mailMessage);
+                //smtpClient.SendAsync(mailMessage, (object)mailMessage);
+                smtpClient.Send(mailMessage);
                 MessageBox.Show("gönderildi");
             }
             catch (SmtpException ex)
