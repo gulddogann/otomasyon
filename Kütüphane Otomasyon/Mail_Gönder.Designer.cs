@@ -119,11 +119,14 @@
             // 
             // Mail_Gönder
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kütüphane_Otomasyonu__bu_son_.Properties.Resources.w_350;
             this.ClientSize = new System.Drawing.Size(488, 309);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Mail_Gönder";
             this.ShowIcon = false;
             this.groupBox1.ResumeLayout(false);

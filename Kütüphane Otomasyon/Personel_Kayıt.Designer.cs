@@ -71,7 +71,7 @@
             this.kayıtol.Location = new System.Drawing.Point(107, 161);
             this.kayıtol.Name = "kayıtol";
             this.kayıtol.Size = new System.Drawing.Size(139, 23);
-            this.kayıtol.TabIndex = 13;
+            this.kayıtol.TabIndex = 6;
             this.kayıtol.Text = "Kayıt Ol";
             this.kayıtol.UseVisualStyleBackColor = true;
             this.kayıtol.Click += new System.EventHandler(this.kayıtol_Click);
@@ -82,14 +82,14 @@
             this.pertelno.Mask = "(999) 000-0000";
             this.pertelno.Name = "pertelno";
             this.pertelno.Size = new System.Drawing.Size(139, 23);
-            this.pertelno.TabIndex = 12;
+            this.pertelno.TabIndex = 4;
             // 
             // perposta
             // 
             this.perposta.Location = new System.Drawing.Point(107, 132);
             this.perposta.Name = "perposta";
             this.perposta.Size = new System.Drawing.Size(139, 23);
-            this.perposta.TabIndex = 9;
+            this.perposta.TabIndex = 5;
             // 
             // label5
             // 
@@ -114,7 +114,7 @@
             this.persoyad.Location = new System.Drawing.Point(107, 74);
             this.persoyad.Name = "persoyad";
             this.persoyad.Size = new System.Drawing.Size(139, 23);
-            this.persoyad.TabIndex = 5;
+            this.persoyad.TabIndex = 3;
             // 
             // label3
             // 
@@ -130,7 +130,7 @@
             this.perad.Location = new System.Drawing.Point(107, 45);
             this.perad.Name = "perad";
             this.perad.Size = new System.Drawing.Size(139, 23);
-            this.perad.TabIndex = 3;
+            this.perad.TabIndex = 2;
             // 
             // label2
             // 
@@ -159,6 +159,7 @@
             // 
             // Personel_Kayıt
             // 
+            this.AcceptButton = this.kayıtol;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -166,6 +167,7 @@
             this.ClientSize = new System.Drawing.Size(289, 226);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Personel_Kayıt";
             this.ShowIcon = false;
             this.groupBox1.ResumeLayout(false);

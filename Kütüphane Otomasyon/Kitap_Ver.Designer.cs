@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,16 +39,13 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ogrno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label5);
@@ -59,36 +55,25 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.ogrno);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(632, 324);
+            this.groupBox1.Size = new System.Drawing.Size(652, 127);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Ver";
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(303, 259);
+            this.dateTimePicker2.Location = new System.Drawing.Point(95, 82);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(232, 23);
             this.dateTimePicker2.TabIndex = 16;
             // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(190, 230);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 79);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Barkod Okut";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(303, 288);
+            this.button2.Location = new System.Drawing.Point(333, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 23);
             this.button2.TabIndex = 15;
@@ -98,7 +83,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(428, 288);
+            this.button1.Location = new System.Drawing.Point(458, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 23);
             this.button1.TabIndex = 14;
@@ -109,7 +94,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 177);
+            this.label5.Location = new System.Drawing.Point(36, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 15);
             this.label5.TabIndex = 12;
@@ -117,7 +102,7 @@
             // 
             // kitapno
             // 
-            this.kitapno.Location = new System.Drawing.Point(65, 174);
+            this.kitapno.Location = new System.Drawing.Point(95, 24);
             this.kitapno.Name = "kitapno";
             this.kitapno.Size = new System.Drawing.Size(470, 23);
             this.kitapno.TabIndex = 11;
@@ -125,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(541, 267);
+            this.label4.Location = new System.Drawing.Point(6, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 15);
             this.label4.TabIndex = 9;
@@ -134,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(541, 238);
+            this.label3.Location = new System.Drawing.Point(16, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 7;
@@ -142,14 +127,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(303, 232);
+            this.dateTimePicker1.Location = new System.Drawing.Point(95, 53);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(232, 23);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // ogrno
             // 
-            this.ogrno.Location = new System.Drawing.Point(303, 203);
+            this.ogrno.Location = new System.Drawing.Point(333, 53);
             this.ogrno.Name = "ogrno";
             this.ogrno.Size = new System.Drawing.Size(232, 23);
             this.ogrno.TabIndex = 5;
@@ -157,34 +142,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(541, 206);
+            this.label2.Location = new System.Drawing.Point(571, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = ":Öğrenci No";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(470, 143);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Kitap_Ver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kütüphane_Otomasyonu__bu_son_.Properties.Resources.w_350;
-            this.ClientSize = new System.Drawing.Size(654, 344);
+            this.ClientSize = new System.Drawing.Size(676, 149);
             this.Controls.Add(this.groupBox1);
             this.Name = "Kitap_Ver";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Kitap_Ver_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,10 +172,8 @@
         private DateTimePicker dateTimePicker1;
         private TextBox ogrno;
         private Label label2;
-        private PictureBox pictureBox1;
         private Label label5;
         private TextBox kitapno;
-        private Button button3;
         private Button button2;
         private Button button1;
         private DateTimePicker dateTimePicker2;

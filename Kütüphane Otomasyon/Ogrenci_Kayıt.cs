@@ -34,5 +34,15 @@ namespace Kütüphane_Otomasyonu__bu_son_
             conn.Close();
             MessageBox.Show("Kaydedildi");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            MySqlCommand mySqlCommand = new MySqlCommand("delete from Ogrenci where ogrid = @p1", conn);
+            mySqlCommand.Parameters.AddWithValue("@p1", Convert.ToInt32(textBox1.Text));
+            mySqlCommand.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Kayıt Silindi");
+        }
     }
 }

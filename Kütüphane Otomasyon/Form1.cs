@@ -45,7 +45,7 @@ namespace Kütüphane_Otomasyonu__bu_son_
 
         private void kitapal_Click(object sender, EventArgs e)
         {
-            Kitap_Al kitap_Al = new Kitap_Al();
+            Kitap_AlisVeris kitap_Al = new Kitap_AlisVeris();
             kitap_Al.Show();
         }
 

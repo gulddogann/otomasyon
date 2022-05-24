@@ -22,10 +22,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
         private void kitapekle_Click(object sender, EventArgs e)
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("insert into Kitap (kitapid,kitapadi,isbn,yayinadi,stoksayisi,sayfasayisi,kutupektarihi,dil,yazar,cevirmen,editor,rafno,sutun,perid) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14)",conn);
+            MySqlCommand cmd = new MySqlCommand("insert into Kitap (kitapid,kitapadi,yayinadi,stoksayisi,sayfasayisi,kutupektarihi,dil,yazar,cevirmen,editor,rafno,sutun,perid) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14)",conn);
             cmd.Parameters.AddWithValue("@p1",Convert.ToInt32(barkod_no.Text));
             cmd.Parameters.AddWithValue("@p2",kitap_ad.Text);
-            cmd.Parameters.AddWithValue("@p3",ısbn.Text);
+            //cmd.Parameters.AddWithValue("@p3",ısbn.Text);
             cmd.Parameters.AddWithValue("@p4",yayınevi.Text);
             cmd.Parameters.AddWithValue("@p5",Convert.ToInt32(stok_sayısı.Text));
             cmd.Parameters.AddWithValue("@p6",Convert.ToInt32(kitap_sayfa.Text));
@@ -41,6 +41,21 @@ namespace Kütüphane_Otomasyonu__bu_son_
             conn.Close();
             MessageBox.Show("Kitap Eklendi");
 
+        }
+
+        private void yazar_ad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kitapsil_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            MySqlCommand mySqlCommand = new MySqlCommand("delete from Kitap where kitapid = @p1", conn);
+            mySqlCommand.Parameters.AddWithValue("@p1", Convert.ToInt32(textBox2.Text));
+            mySqlCommand.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Kitap Silindi");
         }
     }
 }

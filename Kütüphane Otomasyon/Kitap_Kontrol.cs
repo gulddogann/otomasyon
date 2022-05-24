@@ -22,5 +22,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
             Mail_Gönder mail_Gönder = new Mail_Gönder();
             mail_Gönder.Show();
         }
+
+        private void Kitap_Kontrol_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

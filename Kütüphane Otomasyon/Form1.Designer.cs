@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.kitapekle = new System.Windows.Forms.Button();
-            this.kitapsil = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.ogrkayıt = new System.Windows.Forms.Button();
             this.kitapal = new System.Windows.Forms.Button();
-            this.kitapver = new System.Windows.Forms.Button();
             this.kitapkontrol = new System.Windows.Forms.Button();
             this.kayıtol = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,22 +49,11 @@
             this.kitapekle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.kitapekle.Location = new System.Drawing.Point(6, 22);
             this.kitapekle.Name = "kitapekle";
-            this.kitapekle.Size = new System.Drawing.Size(92, 23);
-            this.kitapekle.TabIndex = 0;
-            this.kitapekle.Text = "Kitap Ekle";
+            this.kitapekle.Size = new System.Drawing.Size(92, 52);
+            this.kitapekle.TabIndex = 2;
+            this.kitapekle.Text = "Kitap Ekle ve Sil";
             this.kitapekle.UseVisualStyleBackColor = true;
             this.kitapekle.Click += new System.EventHandler(this.kitapekle_Click);
-            // 
-            // kitapsil
-            // 
-            this.kitapsil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kitapsil.Location = new System.Drawing.Point(6, 51);
-            this.kitapsil.Name = "kitapsil";
-            this.kitapsil.Size = new System.Drawing.Size(92, 23);
-            this.kitapsil.TabIndex = 1;
-            this.kitapsil.Text = "Kitap Sil";
-            this.kitapsil.UseVisualStyleBackColor = true;
-            this.kitapsil.Click += new System.EventHandler(this.kitapsil_Click);
             // 
             // groupBox1
             // 
@@ -75,11 +62,9 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.ogrkayıt);
             this.groupBox1.Controls.Add(this.kitapal);
-            this.groupBox1.Controls.Add(this.kitapver);
             this.groupBox1.Controls.Add(this.kitapkontrol);
             this.groupBox1.Controls.Add(this.kayıtol);
             this.groupBox1.Controls.Add(this.kitapekle);
-            this.groupBox1.Controls.Add(this.kitapsil);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -91,13 +76,12 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(103, 68);
+            this.button3.Location = new System.Drawing.Point(6, 165);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 33);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Öğrenci Sil";
+            this.button3.Size = new System.Drawing.Size(190, 33);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Rapor ve İstatistik";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -115,33 +99,22 @@
             this.ogrkayıt.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ogrkayıt.Location = new System.Drawing.Point(104, 22);
             this.ogrkayıt.Name = "ogrkayıt";
-            this.ogrkayıt.Size = new System.Drawing.Size(93, 40);
-            this.ogrkayıt.TabIndex = 5;
-            this.ogrkayıt.Text = "Öğrenci Kayıt";
+            this.ogrkayıt.Size = new System.Drawing.Size(93, 52);
+            this.ogrkayıt.TabIndex = 3;
+            this.ogrkayıt.Text = "Öğrenci Kayıt ve Sil";
             this.ogrkayıt.UseVisualStyleBackColor = true;
             this.ogrkayıt.Click += new System.EventHandler(this.ogrkayıt_Click);
             // 
             // kitapal
             // 
             this.kitapal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kitapal.Location = new System.Drawing.Point(103, 136);
+            this.kitapal.Location = new System.Drawing.Point(104, 80);
             this.kitapal.Name = "kitapal";
-            this.kitapal.Size = new System.Drawing.Size(93, 23);
-            this.kitapal.TabIndex = 4;
-            this.kitapal.Text = "Kitap Al";
+            this.kitapal.Size = new System.Drawing.Size(93, 40);
+            this.kitapal.TabIndex = 5;
+            this.kitapal.Text = "Kitap Alış-Veriş";
             this.kitapal.UseVisualStyleBackColor = true;
             this.kitapal.Click += new System.EventHandler(this.kitapal_Click);
-            // 
-            // kitapver
-            // 
-            this.kitapver.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kitapver.Location = new System.Drawing.Point(104, 107);
-            this.kitapver.Name = "kitapver";
-            this.kitapver.Size = new System.Drawing.Size(93, 23);
-            this.kitapver.TabIndex = 3;
-            this.kitapver.Text = "Kitap Ver";
-            this.kitapver.UseVisualStyleBackColor = true;
-            this.kitapver.Click += new System.EventHandler(this.kitapver_Click);
             // 
             // kitapkontrol
             // 
@@ -149,7 +122,7 @@
             this.kitapkontrol.Location = new System.Drawing.Point(6, 80);
             this.kitapkontrol.Name = "kitapkontrol";
             this.kitapkontrol.Size = new System.Drawing.Size(92, 40);
-            this.kitapkontrol.TabIndex = 2;
+            this.kitapkontrol.TabIndex = 4;
             this.kitapkontrol.Text = "Kitap Kontrol";
             this.kitapkontrol.UseVisualStyleBackColor = true;
             this.kitapkontrol.Click += new System.EventHandler(this.kitapkontrol_Click);
@@ -157,10 +130,10 @@
             // kayıtol
             // 
             this.kayıtol.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.kayıtol.Location = new System.Drawing.Point(6, 165);
+            this.kayıtol.Location = new System.Drawing.Point(103, 126);
             this.kayıtol.Name = "kayıtol";
-            this.kayıtol.Size = new System.Drawing.Size(190, 33);
-            this.kayıtol.TabIndex = 0;
+            this.kayıtol.Size = new System.Drawing.Size(93, 33);
+            this.kayıtol.TabIndex = 7;
             this.kayıtol.Text = "Personel Kayıt";
             this.kayıtol.UseVisualStyleBackColor = true;
             this.kayıtol.Click += new System.EventHandler(this.kayıtol_Click);
@@ -185,7 +158,7 @@
             this.button1.Location = new System.Drawing.Point(103, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Onayla";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -204,10 +177,11 @@
             this.textBox1.Location = new System.Drawing.Point(15, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 23);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 1;
             // 
             // Form1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -215,6 +189,8 @@
             this.ClientSize = new System.Drawing.Size(230, 317);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.groupBox1.ResumeLayout(false);
@@ -227,11 +203,9 @@
         #endregion
 
         private Button kitapekle;
-        private Button kitapsil;
         private GroupBox groupBox1;
         private Button ogrkayıt;
         private Button kitapal;
-        private Button kitapver;
         private Button kitapkontrol;
         private Button kayıtol;
         private GroupBox groupBox2;

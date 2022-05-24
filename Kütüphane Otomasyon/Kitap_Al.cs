@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace Kütüphane_Otomasyonu__bu_son_
 {
-    public partial class Kitap_Al : Form
+    public partial class Kitap_AlisVeris : Form
     {
-        public Kitap_Al()
+        public Kitap_AlisVeris()
         {
             InitializeComponent();
         }
@@ -34,6 +34,30 @@ namespace Kütüphane_Otomasyonu__bu_son_
             command.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Kitap Alındı");
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            MySqlCommand mySqlCommand = new MySqlCommand("insert into OgrenciKitap (ogrid,kitapid,verilentarih) values (@p1,@p2,@p3)", conn);
+            mySqlCommand.Parameters.AddWithValue("@p1", Convert.ToInt32(ogrno.Text));
+            mySqlCommand.Parameters.AddWithValue("@p2", Convert.ToInt32(kitapno.Text));
+            mySqlCommand.Parameters.AddWithValue("@p3", dateTimePicker1.Value);
+            mySqlCommand.Parameters.AddWithValue("@p4", dateTimePicker2.Value);
+            mySqlCommand.ExecuteNonQuery();
+            conn.Close();
+
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("update Kitap set kitapdurum=1 where kitapid=@p1", conn);
+            cmd.Parameters.AddWithValue("@p1", Convert.ToInt32(kitapno.Text));
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Kitap Verildi");
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
 
         }
     }
