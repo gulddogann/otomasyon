@@ -51,7 +51,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
 
         private void button1_Click(object sender, EventArgs e)
         {
-               
+               Form3 fr = new Form3();
+            fr.personelEkranı = "";
+            fr.ShowDialog();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
