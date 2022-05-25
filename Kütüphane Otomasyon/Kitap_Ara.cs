@@ -16,5 +16,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
         {
             InitializeComponent();
         }
+
+        private void Kitap_Ara_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
