@@ -68,7 +68,9 @@ namespace Kütüphane_Otomasyonu__bu_son_
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            button3.PerformClick();
+            Form2 fr = new Form2();
+            fr.raporIstatistik = "";
+            fr.ShowDialog();
         }
     }
 }
