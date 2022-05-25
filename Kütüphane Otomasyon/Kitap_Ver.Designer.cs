@@ -56,36 +56,42 @@
             this.groupBox1.Controls.Add(this.ogrno);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 16);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(652, 127);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(745, 169);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Ver";
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(95, 82);
+            this.dateTimePicker2.Location = new System.Drawing.Point(109, 109);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(232, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 27);
             this.dateTimePicker2.TabIndex = 16;
             // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(333, 82);
+            this.button2.Location = new System.Drawing.Point(381, 109);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.Size = new System.Drawing.Size(136, 31);
             this.button2.TabIndex = 15;
             this.button2.Text = "Ek Tarih Ver";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(458, 82);
+            this.button1.Location = new System.Drawing.Point(523, 109);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.Size = new System.Drawing.Size(122, 31);
             this.button1.TabIndex = 14;
             this.button1.Text = "Kitap Ver";
             this.button1.UseVisualStyleBackColor = true;
@@ -94,67 +100,71 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 27);
+            this.label5.Location = new System.Drawing.Point(41, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 15);
+            this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Kitap No:";
             // 
             // kitapno
             // 
-            this.kitapno.Location = new System.Drawing.Point(95, 24);
+            this.kitapno.Location = new System.Drawing.Point(109, 32);
+            this.kitapno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.kitapno.Name = "kitapno";
-            this.kitapno.Size = new System.Drawing.Size(470, 23);
+            this.kitapno.Size = new System.Drawing.Size(537, 27);
             this.kitapno.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 88);
+            this.label4.Location = new System.Drawing.Point(7, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 15);
+            this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = ":Alınacak Tarih";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 56);
+            this.label3.Location = new System.Drawing.Point(18, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 15);
+            this.label3.Size = new System.Drawing.Size(92, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = ":Verilen Tarih";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(95, 53);
+            this.dateTimePicker1.Location = new System.Drawing.Point(109, 71);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(232, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 27);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // ogrno
             // 
-            this.ogrno.Location = new System.Drawing.Point(333, 53);
+            this.ogrno.Location = new System.Drawing.Point(381, 71);
+            this.ogrno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ogrno.Name = "ogrno";
-            this.ogrno.Size = new System.Drawing.Size(232, 23);
+            this.ogrno.Size = new System.Drawing.Size(265, 27);
             this.ogrno.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(571, 56);
+            this.label2.Location = new System.Drawing.Point(653, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 15);
+            this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = ":Öğrenci No";
             // 
             // Kitap_Ver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kütüphane_Otomasyonu__bu_son_.Properties.Resources.w_350;
-            this.ClientSize = new System.Drawing.Size(676, 149);
+            this.ClientSize = new System.Drawing.Size(773, 199);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Kitap_Ver";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Kitap_Ver_Load);

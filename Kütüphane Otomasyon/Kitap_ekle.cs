@@ -57,5 +57,24 @@ namespace Kütüphane_Otomasyonu__bu_son_
             conn.Close();
             MessageBox.Show("Kitap Silindi");
         }
+
+        private void temizle_Click(object sender, EventArgs e)
+        {
+
+            barkod_no.Clear();
+            kitap_ad.Clear();
+            cevirmenadı.Clear();
+            kitap_sayfa.Clear();
+            editoradı.Clear();
+            kitap_kategori.Clear();
+            yayınevi.Clear();
+            kitap_dil.Clear();
+            stok_sayısı.Clear();
+            kitap_rafno.Clear();
+            kitap_sütun_no.Clear();
+            yazar_ad.Clear();
+
+
+        }
     }
 }

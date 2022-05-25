@@ -42,5 +42,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
             conn.Close();
             MessageBox.Show("Kitap Verildi");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

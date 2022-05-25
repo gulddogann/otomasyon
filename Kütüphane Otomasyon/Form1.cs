@@ -65,5 +65,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
             Öğrenci_Sil öğrenci_Sil = new Öğrenci_Sil();
             öğrenci_Sil.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            button3.PerformClick();
+        }
     }
 }
