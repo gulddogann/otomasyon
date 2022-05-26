@@ -51,9 +51,6 @@ namespace Kütüphane_Otomasyonu__bu_son_
 
         private void button1_Click(object sender, EventArgs e)
         {
-               Form3 fr = new Form3();
-            fr.personelEkranı = "";
-            fr.ShowDialog();
 
         }
 
@@ -72,8 +69,7 @@ namespace Kütüphane_Otomasyonu__bu_son_
         private void button3_Click_1(object sender, EventArgs e)
         {
             Form2 fr = new Form2();
-            fr.raporIstatistik = "";
-            fr.ShowDialog();
+            fr.Show();
         }
     }
 }
