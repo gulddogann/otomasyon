@@ -76,5 +76,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
 
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,3 +1,5 @@
+using MySql.Data.MySqlClient;
+
 namespace Kütüphane_Otomasyonu__bu_son_
 {
     public partial class Form1 : Form
@@ -49,9 +51,36 @@ namespace Kütüphane_Otomasyonu__bu_son_
             kitap_Al.Show();
         }
 
+        MySqlConnection conn = new MySqlConnection("SERVER=172.21.54.3;DATABASE=GT2MTE;UID=GT2MTE;PWD=G9m5m1t2e357.");
+        Kitap_ekle kitap_Ekle;
         private void button1_Click(object sender, EventArgs e)
         {
+            conn.Open();
+            MySqlCommand mySqlCommand = new MySqlCommand("select * from Personel where perid=@p1 and PersonelSifre=@p2",conn);
+            mySqlCommand.Parameters.AddWithValue("@p1",textBox1.Text);
+            mySqlCommand.Parameters.AddWithValue("@p2",textBox3.Text);
+            MySqlDataReader dr = mySqlCommand.ExecuteReader();
+            if (dr.Read())
+            {
+                kitapekle.Enabled = true;
+                ogrkayıt.Enabled = true;
+                kitapkontrol.Enabled = true;
+                kitapal.Enabled = true;
+                button2.Enabled = true;
+                kayıtol.Enabled = true;
+                button3.Enabled = true;
 
+                kitap_Ekle = new Kitap_ekle();
+                kitap_Ekle.Owner = this;
+                kitap_Ekle.textBox1.Text = textBox3.Text;
+
+                MessageBox.Show("Giriş Yapıldı!");
+            }
+            else
+            {
+                MessageBox.Show("Hatalı Giriş!");
+            }
+            conn.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -70,6 +99,17 @@ namespace Kütüphane_Otomasyonu__bu_son_
         {
             Form2 fr = new Form2();
             fr.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            kitapekle.Enabled = false;
+            ogrkayıt.Enabled = false;
+            kitapkontrol.Enabled = false;
+            kitapal.Enabled = false;
+            button2.Enabled = false;
+            kayıtol.Enabled = true;
+            button3.Enabled = false;
         }
     }
 }

@@ -22,12 +22,13 @@ namespace Kütüphane_Otomasyonu__bu_son_
         private void kayıtol_Click(object sender, EventArgs e)
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("insert into Personel (personelad,personelsoyad,personeleposta,perid,personeltelno) values (@p1,@p2,@p3,@p4,@p5)", conn);
+            MySqlCommand cmd = new MySqlCommand("insert into Personel (personelad,personelsoyad,personeleposta,perid,personeltelno,PersonelSifre) values (@p1,@p2,@p3,@p4,@p5,@p6)", conn);
             cmd.Parameters.AddWithValue("@p1", perad.Text);
             cmd.Parameters.AddWithValue("@p2", persoyad.Text);
             cmd.Parameters.AddWithValue("@p3", perposta.Text);
             cmd.Parameters.AddWithValue("@p4", perno.Text);
             cmd.Parameters.AddWithValue("@p5", pertelno.Text);
+            cmd.Parameters.AddWithValue("@p6", textBox1.Text);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Kaydedildi");

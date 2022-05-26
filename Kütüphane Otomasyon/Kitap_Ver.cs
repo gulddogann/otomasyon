@@ -45,7 +45,16 @@ namespace Kütüphane_Otomasyonu__bu_son_
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            int kackezuzatildi = 0;
+            conn.Open();
+            MySqlCommand sqlCommand = new MySqlCommand("update OgrenciKitap set alinantarih=@p1 and kackezuzatildi=@p3 where ogrid=@p2",conn);
+            kackezuzatildi++;
+            sqlCommand.Parameters.AddWithValue("@p1",dateTimePicker2.Value.AddDays(15));
+            sqlCommand.Parameters.AddWithValue("@p2",ogrno.Text);
+            sqlCommand.Parameters.AddWithValue("@p3",kackezuzatildi);
+            sqlCommand.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Ek tarih verildi!");
         }
     }
 }
