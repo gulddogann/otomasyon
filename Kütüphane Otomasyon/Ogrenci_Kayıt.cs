@@ -16,6 +16,8 @@ namespace Kütüphane_Otomasyonu__bu_son_
         public Ogrenci_Kayıt()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.Manual;
+            Location = new Point(230, 0);
         }
 
         MySqlConnection conn = new MySqlConnection("SERVER=172.21.54.3;DATABASE=GT2MTE;UID=GT2MTE;PWD=G9m5m1t2e357.");

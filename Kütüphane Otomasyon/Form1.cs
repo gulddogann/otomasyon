@@ -7,6 +7,8 @@ namespace Kütüphane_Otomasyonu__bu_son_
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.Manual;
+            Location = new Point(0,0);
         }
 
         private void kitapekle_Click(object sender, EventArgs e)
@@ -52,7 +54,6 @@ namespace Kütüphane_Otomasyonu__bu_son_
         }
 
         MySqlConnection conn = new MySqlConnection("SERVER=172.21.54.3;DATABASE=GT2MTE;UID=GT2MTE;PWD=G9m5m1t2e357.");
-        Kitap_ekle kitap_Ekle;
         private void button1_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -69,10 +70,6 @@ namespace Kütüphane_Otomasyonu__bu_son_
                 button2.Enabled = true;
                 kayıtol.Enabled = true;
                 button3.Enabled = true;
-
-                kitap_Ekle = new Kitap_ekle();
-                kitap_Ekle.Owner = this;
-                kitap_Ekle.textBox1.Text = textBox3.Text;
 
                 MessageBox.Show("Giriş Yapıldı!");
             }
