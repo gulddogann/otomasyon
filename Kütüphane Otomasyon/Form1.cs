@@ -56,28 +56,42 @@ namespace Kütüphane_Otomasyonu__bu_son_
         MySqlConnection conn = new MySqlConnection("SERVER=172.21.54.3;DATABASE=GT2MTE;UID=GT2MTE;PWD=G9m5m1t2e357.");
         private void button1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            MySqlCommand mySqlCommand = new MySqlCommand("select * from Personel where perid=@p1 and PersonelSifre=@p2",conn);
-            mySqlCommand.Parameters.AddWithValue("@p1",textBox1.Text);
-            mySqlCommand.Parameters.AddWithValue("@p2",textBox3.Text);
-            MySqlDataReader dr = mySqlCommand.ExecuteReader();
-            if (dr.Read())
+            try
             {
-                kitapekle.Enabled = true;
-                ogrkayıt.Enabled = true;
-                kitapkontrol.Enabled = true;
-                kitapal.Enabled = true;
-                button2.Enabled = true;
-                kayıtol.Enabled = true;
-                button3.Enabled = true;
+                conn.Open();
+                MySqlCommand mySqlCommand = new MySqlCommand("select * from Personel where perid=@p1 and PersonelSifre=@p2", conn);
+                mySqlCommand.Parameters.AddWithValue("@p1", textBox1.Text);
+                mySqlCommand.Parameters.AddWithValue("@p2", textBox3.Text);
+                MySqlDataReader dr = mySqlCommand.ExecuteReader();
+                if (dr.Read())
+                {
+                    kitapekle.Enabled = true;
+                    ogrkayıt.Enabled = true;
+                    kitapkontrol.Enabled = true;
+                    kitapal.Enabled = true;
+                    button2.Enabled = true;
+                    kayıtol.Enabled = true;
+                    button3.Enabled = true;
 
-                MessageBox.Show("Giriş Yapıldı!");
+                    MessageBox.Show("Giriş Yapıldı!");
+                    button1.Enabled = false;
+                    textBox1.Clear();
+                    textBox3.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı Giriş!");
+                    textBox1.Clear();
+                    textBox3.Clear();
+                }
+                conn.Close();
             }
-            else
+            catch(System.TimeoutException ex)
             {
-                MessageBox.Show("Hatalı Giriş!");
+                MessageBox.Show("Okulun internetine bağlı olduğunuzdan emin olun");
             }
-            conn.Close();
+            
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

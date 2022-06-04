@@ -37,8 +37,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.temizle = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.stok_sayısı = new System.Windows.Forms.TextBox();
             this.yayınevi = new System.Windows.Forms.TextBox();
             this.kitapekle = new System.Windows.Forms.Button();
             this.kitap_sütun_no = new System.Windows.Forms.TextBox();
@@ -65,30 +63,27 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.editor = new System.Windows.Forms.TextBox();
+            this.cevirmen2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.yayınevi2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.kitapsutun2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.kitaprafno2 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.kitapdil2 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.kitapsayfa2 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.kitapkategori2 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.yazaradi2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.kitapadi2 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.barkod_no2 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
@@ -108,8 +103,6 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.temizle);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.stok_sayısı);
             this.groupBox2.Controls.Add(this.yayınevi);
             this.groupBox2.Controls.Add(this.kitapekle);
             this.groupBox2.Controls.Add(this.kitap_sütun_no);
@@ -138,7 +131,7 @@
             // 
             // kitapektar
             // 
-            this.kitapektar.Location = new System.Drawing.Point(318, 175);
+            this.kitapektar.Location = new System.Drawing.Point(318, 146);
             this.kitapektar.Name = "kitapektar";
             this.kitapektar.Size = new System.Drawing.Size(214, 23);
             this.kitapektar.TabIndex = 12;
@@ -183,7 +176,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Location = new System.Drawing.Point(538, 178);
+            this.label15.Location = new System.Drawing.Point(538, 149);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 15);
             this.label15.TabIndex = 34;
@@ -209,24 +202,6 @@
             this.label12.Size = new System.Drawing.Size(56, 15);
             this.label12.TabIndex = 28;
             this.label12.Text = ":Yayın Evi";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(538, 149);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 15);
-            this.label11.TabIndex = 27;
-            this.label11.Text = ":Stok Sayısı";
-            // 
-            // stok_sayısı
-            // 
-            this.stok_sayısı.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stok_sayısı.Location = new System.Drawing.Point(318, 146);
-            this.stok_sayısı.Name = "stok_sayısı";
-            this.stok_sayısı.Size = new System.Drawing.Size(214, 23);
-            this.stok_sayısı.TabIndex = 11;
             // 
             // yayınevi
             // 
@@ -340,7 +315,7 @@
             // yazar_ad
             // 
             this.yazar_ad.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.yazar_ad.Location = new System.Drawing.Point(318, 204);
+            this.yazar_ad.Location = new System.Drawing.Point(318, 175);
             this.yazar_ad.Name = "yazar_ad";
             this.yazar_ad.Size = new System.Drawing.Size(214, 23);
             this.yazar_ad.TabIndex = 13;
@@ -349,7 +324,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(536, 207);
+            this.label5.Location = new System.Drawing.Point(536, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 9;
@@ -400,7 +375,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 288);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(646, 100);
+            this.groupBox1.Size = new System.Drawing.Size(326, 271);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kitap Sil";
@@ -421,7 +396,7 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox2.Location = new System.Drawing.Point(98, 28);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(434, 23);
+            this.textBox2.Size = new System.Drawing.Size(214, 23);
             this.textBox2.TabIndex = 16;
             // 
             // label13
@@ -440,30 +415,27 @@
             this.groupBox3.Controls.Add(this.dateTimePicker1);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.editor);
+            this.groupBox3.Controls.Add(this.cevirmen2);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.yayınevi2);
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.kitapsutun2);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.kitaprafno2);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.kitapdil2);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.kitapsayfa2);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.kitapkategori2);
             this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.yazaradi2);
             this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.kitapadi2);
             this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.barkod_no2);
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Location = new System.Drawing.Point(664, 12);
@@ -475,7 +447,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(318, 175);
+            this.dateTimePicker1.Location = new System.Drawing.Point(318, 146);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(184, 23);
             this.dateTimePicker1.TabIndex = 12;
@@ -500,41 +472,31 @@
             this.label16.TabIndex = 42;
             this.label16.Text = ":Editör Adı";
             // 
-            // textBox3
+            // editor
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox3.Location = new System.Drawing.Point(318, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 23);
-            this.textBox3.TabIndex = 9;
+            this.editor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.editor.Location = new System.Drawing.Point(318, 88);
+            this.editor.Name = "editor";
+            this.editor.Size = new System.Drawing.Size(184, 23);
+            this.editor.TabIndex = 9;
             // 
-            // textBox4
+            // cevirmen2
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox4.Location = new System.Drawing.Point(318, 59);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 23);
-            this.textBox4.TabIndex = 8;
+            this.cevirmen2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cevirmen2.Location = new System.Drawing.Point(318, 59);
+            this.cevirmen2.Name = "cevirmen2";
+            this.cevirmen2.Size = new System.Drawing.Size(184, 23);
+            this.cevirmen2.TabIndex = 8;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label17.Location = new System.Drawing.Point(508, 180);
+            this.label17.Location = new System.Drawing.Point(508, 151);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(85, 15);
             this.label17.TabIndex = 34;
             this.label17.Text = ":Eklenme tarihi";
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(208, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Temizle";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -546,31 +508,13 @@
             this.label18.TabIndex = 28;
             this.label18.Text = ":Yayın Evi";
             // 
-            // label19
+            // yayınevi2
             // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(508, 151);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 15);
-            this.label19.TabIndex = 27;
-            this.label19.Text = ":Stok Sayısı";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox5.Location = new System.Drawing.Point(318, 146);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 23);
-            this.textBox5.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox6.Location = new System.Drawing.Point(318, 117);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(184, 23);
-            this.textBox6.TabIndex = 10;
+            this.yayınevi2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.yayınevi2.Location = new System.Drawing.Point(318, 117);
+            this.yayınevi2.Name = "yayınevi2";
+            this.yayınevi2.Size = new System.Drawing.Size(184, 23);
+            this.yayınevi2.TabIndex = 10;
             // 
             // button2
             // 
@@ -583,13 +527,13 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox7
+            // kitapsutun2
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox7.Location = new System.Drawing.Point(98, 204);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(214, 23);
-            this.textBox7.TabIndex = 7;
+            this.kitapsutun2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kitapsutun2.Location = new System.Drawing.Point(98, 204);
+            this.kitapsutun2.Name = "kitapsutun2";
+            this.kitapsutun2.Size = new System.Drawing.Size(214, 23);
+            this.kitapsutun2.TabIndex = 7;
             // 
             // label20
             // 
@@ -601,13 +545,13 @@
             this.label20.TabIndex = 17;
             this.label20.Text = "Kitap sütun no:";
             // 
-            // textBox8
+            // kitaprafno2
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox8.Location = new System.Drawing.Point(98, 175);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(214, 23);
-            this.textBox8.TabIndex = 6;
+            this.kitaprafno2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kitaprafno2.Location = new System.Drawing.Point(98, 175);
+            this.kitaprafno2.Name = "kitaprafno2";
+            this.kitaprafno2.Size = new System.Drawing.Size(214, 23);
+            this.kitaprafno2.TabIndex = 6;
             // 
             // label21
             // 
@@ -619,13 +563,13 @@
             this.label21.TabIndex = 15;
             this.label21.Text = "Kitap raf no:";
             // 
-            // textBox9
+            // kitapdil2
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox9.Location = new System.Drawing.Point(98, 146);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(214, 23);
-            this.textBox9.TabIndex = 5;
+            this.kitapdil2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kitapdil2.Location = new System.Drawing.Point(98, 146);
+            this.kitapdil2.Name = "kitapdil2";
+            this.kitapdil2.Size = new System.Drawing.Size(214, 23);
+            this.kitapdil2.TabIndex = 5;
             // 
             // label22
             // 
@@ -637,13 +581,13 @@
             this.label22.TabIndex = 13;
             this.label22.Text = "Kitap Dil:";
             // 
-            // textBox10
+            // kitapsayfa2
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox10.Location = new System.Drawing.Point(98, 88);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(214, 23);
-            this.textBox10.TabIndex = 3;
+            this.kitapsayfa2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kitapsayfa2.Location = new System.Drawing.Point(98, 88);
+            this.kitapsayfa2.Name = "kitapsayfa2";
+            this.kitapsayfa2.Size = new System.Drawing.Size(214, 23);
+            this.kitapsayfa2.TabIndex = 3;
             // 
             // label23
             // 
@@ -655,13 +599,13 @@
             this.label23.TabIndex = 11;
             this.label23.Text = "Kitap Sayfa:";
             // 
-            // textBox11
+            // kitapkategori2
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox11.Location = new System.Drawing.Point(98, 117);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(214, 23);
-            this.textBox11.TabIndex = 4;
+            this.kitapkategori2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kitapkategori2.Location = new System.Drawing.Point(98, 117);
+            this.kitapkategori2.Name = "kitapkategori2";
+            this.kitapkategori2.Size = new System.Drawing.Size(214, 23);
+            this.kitapkategori2.TabIndex = 4;
             // 
             // label24
             // 
@@ -673,31 +617,31 @@
             this.label24.TabIndex = 9;
             this.label24.Text = "Kitap Kategori:";
             // 
-            // textBox12
+            // yazaradi2
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox12.Location = new System.Drawing.Point(318, 204);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(184, 23);
-            this.textBox12.TabIndex = 13;
+            this.yazaradi2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.yazaradi2.Location = new System.Drawing.Point(318, 175);
+            this.yazaradi2.Name = "yazaradi2";
+            this.yazaradi2.Size = new System.Drawing.Size(184, 23);
+            this.yazaradi2.TabIndex = 13;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label25.Location = new System.Drawing.Point(506, 209);
+            this.label25.Location = new System.Drawing.Point(506, 180);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(58, 15);
             this.label25.TabIndex = 9;
             this.label25.Text = ":Yazar Adı";
             // 
-            // textBox13
+            // kitapadi2
             // 
-            this.textBox13.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox13.Location = new System.Drawing.Point(98, 59);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(214, 23);
-            this.textBox13.TabIndex = 2;
+            this.kitapadi2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kitapadi2.Location = new System.Drawing.Point(98, 59);
+            this.kitapadi2.Name = "kitapadi2";
+            this.kitapadi2.Size = new System.Drawing.Size(214, 23);
+            this.kitapadi2.TabIndex = 2;
             // 
             // label26
             // 
@@ -709,13 +653,13 @@
             this.label26.TabIndex = 7;
             this.label26.Text = "Kitap Adı:";
             // 
-            // textBox14
+            // barkod_no2
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox14.Location = new System.Drawing.Point(98, 30);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(404, 23);
-            this.textBox14.TabIndex = 1;
+            this.barkod_no2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.barkod_no2.Location = new System.Drawing.Point(98, 30);
+            this.barkod_no2.Name = "barkod_no2";
+            this.barkod_no2.Size = new System.Drawing.Size(404, 23);
+            this.barkod_no2.TabIndex = 1;
             // 
             // label27
             // 
@@ -730,10 +674,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(664, 288);
+            this.dataGridView1.Location = new System.Drawing.Point(344, 288);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(608, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(928, 271);
             this.dataGridView1.TabIndex = 46;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -743,7 +687,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = global::Kütüphane_Otomasyonu__bu_son_.Properties.Resources.w_350;
-            this.ClientSize = new System.Drawing.Size(1280, 477);
+            this.ClientSize = new System.Drawing.Size(1280, 571);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -767,8 +711,6 @@
         #endregion
         private GroupBox groupBox2;
         private Label label12;
-        private Label label11;
-        private TextBox stok_sayısı;
         private TextBox yayınevi;
         private Button kitapekle;
         private TextBox kitap_sütun_no;
@@ -802,30 +744,29 @@
         private DateTimePicker dateTimePicker1;
         private Label label14;
         private Label label16;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox editor;
+        private TextBox cevirmen2;
         private Label label17;
-        private Button button1;
         private Label label18;
         private Label label19;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox stoksayisi2;
+        private TextBox yayınevi2;
         private Button button2;
-        private TextBox textBox7;
+        private TextBox kitapsutun2;
         private Label label20;
-        private TextBox textBox8;
+        private TextBox kitaprafno2;
         private Label label21;
-        private TextBox textBox9;
+        private TextBox kitapdil2;
         private Label label22;
-        private TextBox textBox10;
+        private TextBox kitapsayfa2;
         private Label label23;
-        private TextBox textBox11;
+        private TextBox kitapkategori2;
         private Label label24;
-        private TextBox textBox12;
+        private TextBox yazaradi2;
         private Label label25;
-        private TextBox textBox13;
+        private TextBox kitapadi2;
         private Label label26;
-        private TextBox textBox14;
+        private TextBox barkod_no2;
         private Label label27;
         private DataGridView dataGridView1;
     }

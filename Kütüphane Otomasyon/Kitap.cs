@@ -11,7 +11,7 @@ namespace Kütüphane_Otomasyonu__bu_son_
         private int id;
         private string ad;
         private string yayinadi;
-        private int stoksayisi;
+        private int kategori;
         private int sayfasayisi;
         private DateTime kutupektarihi;
         private string dil;
@@ -40,10 +40,10 @@ namespace Kütüphane_Otomasyonu__bu_son_
             set { yayinadi = value; }
         }
 
-        public int Stoksayisi
+        public int Kategori
         {
-            get { return stoksayisi; }
-            set { stoksayisi = value; }
+            get { return kategori; }
+            set { kategori = value; }
         }
 
         public int Sayfasayisi
