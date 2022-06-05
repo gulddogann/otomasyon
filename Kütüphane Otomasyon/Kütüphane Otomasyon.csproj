@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="mysql.data" Version="8.0.29" />
+    <PackageReference Include="Twilio" Version="5.75.2" />
   </ItemGroup>
 
   <ItemGroup>

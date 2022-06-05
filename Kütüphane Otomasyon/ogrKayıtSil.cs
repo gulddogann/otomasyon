@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace Kütüphane_Otomasyon
 {
@@ -32,13 +34,6 @@ namespace Kütüphane_Otomasyon
             ogrtablo();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            personelEkrani fr=new personelEkrani();
-            fr.Show();
-            this.Hide();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (eposbir.Text == "")
@@ -49,30 +44,47 @@ namespace Kütüphane_Otomasyon
             {
                 MessageBox.Show("E-Posta türünü belirtiniz");
             }
+            if (eposbir.Text.Contains('@'))
+            {
+                MessageBox.Show("Eposta eposta türünü içeremez!", "UYARI", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information);
+            }
             if (comboBox1.SelectedIndex == 1 || comboBox1.SelectedIndex == 2)
             {
                 bolumadTxt.Text = "";
             }
-            //mesleğin seçilmesinin zorunlu olması gerekiyor
+
             else
             {
                 try
                 {
-                    string eposta = eposbir.Text + eposiki.Text;
+                    MySqlCommand command = new MySqlCommand("select * from Ogrenci where ogrtel=@p3", baglanti.Baglan());
+                    command.Parameters.AddWithValue("@p3", telefonTxt.Text);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        if (telefonTxt.Text == reader["ogrtel"].ToString())
+                        {
+                            MessageBox.Show("Üye zaten Kaydedilmiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                        }
+                        else
+                        { 
+                            string eposta = eposbir.Text + eposiki.Text;
 
-                    MySqlCommand cmd = new MySqlCommand("insert into Ogrenci (ogrid,ograd,ogrsoyad,ogrposta,ogrbolumad,ogrtel,meslek) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", baglanti.Baglan());
+                            MySqlCommand cmd = new MySqlCommand("insert into Ogrenci (ogrid,ograd,ogrsoyad,ogrposta,ogrbolumad,ogrtel,meslek) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", baglanti.Baglan());
 
-                    cmd.Parameters.AddWithValue("@p1", (Convert.ToInt32(ogrNoTxt.Text)));
-                    cmd.Parameters.AddWithValue("@p2", (adTxt.Text));
-                    cmd.Parameters.AddWithValue("@p3", (soyadTxt.Text));
-                    cmd.Parameters.AddWithValue("@p4", (eposta));
-                    cmd.Parameters.AddWithValue("@p5", (bolumadTxt.Text));
-                    cmd.Parameters.AddWithValue("@p6", (telefonTxt.Text));
-                    cmd.Parameters.AddWithValue("@p7", (comboBox1.Text));
+                            cmd.Parameters.AddWithValue("@p1", (Convert.ToInt32(ogrNoTxt.Text)));
+                            cmd.Parameters.AddWithValue("@p2", (adTxt.Text));
+                            cmd.Parameters.AddWithValue("@p3", (soyadTxt.Text));
+                            cmd.Parameters.AddWithValue("@p4", (eposta));
+                            cmd.Parameters.AddWithValue("@p5", (bolumadTxt.Text));
+                            cmd.Parameters.AddWithValue("@p6", (telefonTxt.Text));
+                            cmd.Parameters.AddWithValue("@p7", (comboBox1.Text));
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Üye eklendi");
-                    ogrtablo();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Üye eklendi");
+                            ogrtablo();
+                        }
+                    }                
                 }
                 catch (System.TimeoutException)
                 {
@@ -103,16 +115,30 @@ namespace Kütüphane_Otomasyon
             {
                 try
                 {
-                    Baglanti baglanti = new Baglanti();
-                    MySqlCommand cmd = new MySqlCommand("delete from Ogrenci where ogrid = @p1", baglanti.Baglan());
-                    cmd.Parameters.AddWithValue("@p1", (ogrSilTxt.Text));
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt silindi");
-                    ogrtablo();
+                    MySqlCommand command = new MySqlCommand("select * from Ogrenci where ogrid=@p1", baglanti.Baglan());
+                    command.Parameters.AddWithValue("@p1", Convert.ToInt32(ogrSilTxt.Text));
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        if (Convert.ToInt32(ogrSilTxt.Text) != Convert.ToInt32(reader["ogrid"]))
+                        {
+                            MessageBox.Show("Üye Silinmiş veya hiç Eklenmemiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                        }
+                        else
+                        {
+                            MySqlCommand cmd = new MySqlCommand("delete from Ogrenci where ogrid = @p1", baglanti.Baglan());
+                            cmd.Parameters.AddWithValue("@p1", (ogrSilTxt.Text));
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Kayıt silindi");
+                            ogrtablo();
+                        }
+                    }
+
+                    
                 }
-                catch(Exception ex)
+                catch(System.TimeoutException)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Okulun internetine bağlı olduğunuzdan emin olun","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
         }
@@ -139,7 +165,7 @@ namespace Kütüphane_Otomasyon
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void Temizle_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ogrNoTxt.Clear();
             adTxt.Clear();
@@ -149,6 +175,24 @@ namespace Kütüphane_Otomasyon
             eposbir.Clear();
             eposiki.ResetText();
             bolumadTxt.ResetText();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            personelEkrani fr = new personelEkrani();
+            fr.Show();
+            this.Hide();
+        }
+
+        private void ogrSilTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void bolumadTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
         }
     }
     }

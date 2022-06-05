@@ -30,27 +30,28 @@ namespace Kütüphane_Otomasyon
             {
                 MessageBox.Show("E-Posta türünü belirtiniz");
             }
-            
+            if(eposbir.Text.Contains('@'))
+            {
+                MessageBox.Show("Eposta eposta türünü içeremez!", "UYARI", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information);
+            }
+
             else
             {
                 string eposta = eposbir.Text + eposiki.Text;
 
                 try
                 {
-                    MySqlCommand command = new MySqlCommand("select * from Personel where personelad=@p1 and personelsoyad=@p2 and personeltelno=@p3", baglanti.Baglan());
-                    command.Parameters.AddWithValue("@p1", perad.Text.ToLower());
-                    command.Parameters.AddWithValue("@p2", persoyad.Text.ToLower());
+                    MySqlCommand command = new MySqlCommand("select * from Personel where personeltelno=@p3", baglanti.Baglan());
                     command.Parameters.AddWithValue("@p3", telno.Text);
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        if (perad.Text.ToLower() == reader["personelad"].ToString() && persoyad.Text.ToLower() == reader["personelsoyad"].ToString() && telno.Text == reader["personeltelno"].ToString())
+                        if (telno.Text == reader["personeltelno"].ToString())
                         {
                             MessageBox.Show("Üye zaten Kaydedilmiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
                         }
                         else
                         {
-                            reader.Close();
                             MySqlCommand sqlCommand = new MySqlCommand("insert into Personel(personelad,personelsoyad,personeleposta,personeltelno,personelSifre,perid) VALUES (@p1,@p2,@p3,@p4,@p5,@p6)", baglanti.Baglan());
                             sqlCommand.Parameters.AddWithValue("@p1", perad.Text.ToLower());
                             sqlCommand.Parameters.AddWithValue("@p2", persoyad.Text.ToLower());
@@ -61,7 +62,7 @@ namespace Kütüphane_Otomasyon
                             sqlCommand.ExecuteNonQuery();
                             MessageBox.Show("Personel Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                    }  
+                    }
                 }
                 catch (System.FormatException)
                 {

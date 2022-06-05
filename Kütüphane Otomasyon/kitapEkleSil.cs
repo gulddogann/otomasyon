@@ -17,56 +17,59 @@ namespace Kütüphane_Otomasyon
         {
             InitializeComponent();
         }
+        Baglanti baglanti = new Baglanti();
 
-        private void label9_Click(object sender, EventArgs e)
+        public void Kitablo()
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            personelEkrani fr = new personelEkrani();
-            fr.Show();
-            this.Hide();
+            MySqlCommand command = new MySqlCommand("select * from Kitap", baglanti.Baglan());
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataSet data = new DataSet();
+            adapter.Fill(data);
+            dataGridView1.DataSource = data.Tables[0];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {   
+
+
             try
             {
-                Baglanti baglanti = new Baglanti();
-                MySqlCommand cmd = new MySqlCommand("insert into Kitap (kitapid,kitapadi,yayinadi,sayfasayisi,kutupektarihi,dil,yazar,cevirmen,editor,rafno,sutun,kategori,kitapdurum)values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p13,@p14)", baglanti.Baglan());
-                cmd.Parameters.AddWithValue("@p1", (kitapNoTxt.Text));
-                cmd.Parameters.AddWithValue("@p2", (kitapAdiTxt.Text));
-                cmd.Parameters.AddWithValue("@p3", (yayinAdiTxt.Text));
-                cmd.Parameters.AddWithValue("@p4", (sayfaSayisi.Text));
-                cmd.Parameters.AddWithValue("@p5", (ekTarTxt.Value));
-                cmd.Parameters.AddWithValue("@p6", (dilTxt.Text));
-                cmd.Parameters.AddWithValue("@p7", (yazarTxt.Text));
-                cmd.Parameters.AddWithValue("@p8", (cevirmenTxt.Text));
-                cmd.Parameters.AddWithValue("@p9", (editorTxt.Text));
-                cmd.Parameters.AddWithValue("@p10", (rafNoTxt.Text));
-                cmd.Parameters.AddWithValue("@p11", (sutunTxt.Text));
-                cmd.Parameters.AddWithValue("@p13", (kategoriTxt.Text));
-                cmd.Parameters.AddWithValue("@p14", (0));
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("kitap eklendi");
+                MySqlCommand command = new MySqlCommand("select * from Kitap where kitapid=@p3", baglanti.Baglan());
+                command.Parameters.AddWithValue("@p3",Convert.ToInt32(kitapNoTxt.Text));
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (Convert.ToInt32(kitapNoTxt.Text) == Convert.ToInt32(reader["kitapid"]))
+                    {
+                        MessageBox.Show("Kitap zaten Kaydedilmiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                    }
+                    else
+                    {
+                        MySqlCommand cmd = new MySqlCommand("insert into Kitap (kitapid,kitapadi,yayinadi,sayfasayisi,kutupektarihi,dil,yazar,cevirmen,editor,rafno,sutun,kategori,kitapdurum)values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p13,@p14)", baglanti.Baglan());
+                        cmd.Parameters.AddWithValue("@p1", Convert.ToInt32(kitapNoTxt.Text));
+                        cmd.Parameters.AddWithValue("@p2", (kitapAdiTxt.Text));
+                        cmd.Parameters.AddWithValue("@p3", (yayinAdiTxt.Text));
+                        cmd.Parameters.AddWithValue("@p4", (sayfaSayisi.Text));
+                        cmd.Parameters.AddWithValue("@p5", (ekTarTxt.Value));
+                        cmd.Parameters.AddWithValue("@p6", (dilTxt.Text));
+                        cmd.Parameters.AddWithValue("@p7", (yazarTxt.Text));
+                        cmd.Parameters.AddWithValue("@p8", (cevirmenTxt.Text));
+                        cmd.Parameters.AddWithValue("@p9", (editorTxt.Text));
+                        cmd.Parameters.AddWithValue("@p10", (rafNoTxt.Text));
+                        cmd.Parameters.AddWithValue("@p11", (sutunTxt.Text));
+                        cmd.Parameters.AddWithValue("@p13", (kategoriTxt.Text));
+                        cmd.Parameters.AddWithValue("@p14", (0));
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("kitap eklendi");
+                        Kitablo();
+                    }
+                }
             }
-            catch(Exception ex)
+            catch(System.TimeoutException)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Okulun internetine bağlı olduğunuzdan emin olun","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             
-        }
-
-        private void yayinYiliTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -77,32 +80,31 @@ namespace Kütüphane_Otomasyon
             {
                 try
                 {
-                    Baglanti baglanti = new Baglanti();
-                    MySqlCommand cmd = new MySqlCommand("delete from Kitap where kitapid = @p1", baglanti.Baglan());
-                    cmd.Parameters.AddWithValue("@p1", (kitapSilTxt.Text));
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt başarı ile silindi");
+                    MySqlCommand command = new MySqlCommand("select * from Kitap where kitapid=@p3", baglanti.Baglan());
+                    command.Parameters.AddWithValue("@p3", Convert.ToInt32(kitapNoTxt.Text));
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        if (Convert.ToInt32(kitapNoTxt.Text) != Convert.ToInt32(reader["kitapid"]))
+                        {
+                            MessageBox.Show("Kitap zaten silinmiş veya hiç eklenmemiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                        }
+                        else
+                        {
+                            MySqlCommand cmd = new MySqlCommand("delete from Kitap where kitapid = @p1", baglanti.Baglan());
+                            cmd.Parameters.AddWithValue("@p1", (kitapSilTxt.Text));
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Kayıt başarı ile silindi");
+                            Kitablo();
+                        }
+                        
+                    }
                 }
                 catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
-        }
-        private void Temizle_Click(object sender, EventArgs e)
-        {
-            kitapNoTxt.Clear();
-            kitapAdiTxt.Clear();
-            yayinAdiTxt.Clear();
-            sayfaSayisi.Clear();
-            yazarTxt.Clear();
-            cevirmenTxt.Clear();
-            editorTxt.Clear();
-            rafNoTxt.Clear();
-            sutunTxt.Clear();
-            kategoriTxt.Clear();
-            kitapSilTxt.Clear();
-            dilTxt.ResetText();
         }
 
         private void cevirmenTxt_KeyPress(object sender, KeyPressEventArgs e)
@@ -158,6 +160,34 @@ namespace Kütüphane_Otomasyon
         private void sutunTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            personelEkrani fr = new personelEkrani();
+            fr.Show();
+            this.Hide();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            kitapNoTxt.Clear();
+            kitapAdiTxt.Clear();
+            yayinAdiTxt.Clear();
+            sayfaSayisi.Clear();
+            yazarTxt.Clear();
+            cevirmenTxt.Clear();
+            editorTxt.Clear();
+            rafNoTxt.Clear();
+            sutunTxt.Clear();
+            kategoriTxt.Clear();
+            kitapSilTxt.Clear();
+            dilTxt.ResetText();
+        }
+
+        private void kitapEkleSil_Load(object sender, EventArgs e)
+        {
+            Kitablo();
         }
     }
 }

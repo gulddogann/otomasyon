@@ -84,11 +84,32 @@ namespace Kütüphane_Otomasyon
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
+
+                MySqlCommand cmd = new MySqlCommand("select ogrid as ID,ograd as Ad,ogrsoyad as Soyad,ogrtel as Telefon,ogrposta as Eposta,meslek as Meslek,ogrbolumad as OgrBolum from Ogrenci",baglanti.Baglan());
+                adapter = new MySqlDataAdapter(cmd);
+                DataSet ds2 = new DataSet();
+                adapter.Fill(ds2);
+                dataGridView2.DataSource = ds2.Tables[0];
+
+                MySqlCommand cmd1 = new MySqlCommand("select * from Kitap",baglanti.Baglan());
+                adapter = new MySqlDataAdapter(cmd1);
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                dataGridView3.DataSource = dataSet.Tables[0];
+
+                MySqlCommand cmd2 = new MySqlCommand("select * from Kitap inner join OgrenciKitap on Kitap.kitapid=OgrenciKitap.kitapid where Kitap.kitapdurum=1", baglanti.Baglan());
+                adapter = new MySqlDataAdapter(cmd2);
+                DataSet dts = new DataSet();
+                adapter.Fill(dts);
+                dataGridView4.DataSource = dts.Tables[0];
+
             }
             catch (System.TimeoutException)
             {
                 MessageBox.Show("Okulun internetine bağlı olduğunuzdan emin olun", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        
     }
 }

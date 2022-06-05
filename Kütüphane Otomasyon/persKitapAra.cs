@@ -42,13 +42,6 @@ namespace Kütüphane_Otomasyon
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            personelEkrani fr = new personelEkrani();
-            fr.Show();
-            this.Hide();
-        }
-
         private void kitapNoTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
@@ -56,7 +49,23 @@ namespace Kütüphane_Otomasyon
 
         private void persKitapAra_Load(object sender, EventArgs e)
         {
-            MySqlCommand command = new MySqlCommand("select * from Kitap", baglanti.Baglan());
+            MySqlCommand cmd1 = new MySqlCommand("select * from Kitap", baglanti.Baglan());
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd1);
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+            dataGridView1.DataSource = dataSet.Tables[0];
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            personelEkrani fr = new personelEkrani();
+            fr.Show();
+            this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            MySqlCommand command = new MySqlCommand("select * from Kitap like '%"+textBox1.Text+"%'", baglanti.Baglan());
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataSet ds = new DataSet();
             adapter.Fill(ds);

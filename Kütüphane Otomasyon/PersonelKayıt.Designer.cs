@@ -207,10 +207,10 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(309, 201);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(30, 15);
+            this.linkLabel2.Size = new System.Drawing.Size(28, 15);
             this.linkLabel2.TabIndex = 23;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "İptal";
+            this.linkLabel2.Text = "Geri";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1

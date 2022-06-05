@@ -87,13 +87,6 @@ namespace Kütüphane_Otomasyon
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            personelEkrani fr = new personelEkrani();
-            fr.Show();
-            this.Hide();
-        }
-
         private void kitapAlVer_Load(object sender, EventArgs e)
         {
             iadeDtp.Value = iadeDtp.Value.AddDays(15);
@@ -107,6 +100,13 @@ namespace Kütüphane_Otomasyon
         private void kitapAdTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            personelEkrani fr = new personelEkrani();
+            fr.Show();
+            this.Hide();
         }
     }
 }
