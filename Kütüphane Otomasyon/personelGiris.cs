@@ -68,5 +68,10 @@ namespace Kütüphane_Otomasyon
             personelKayıt.Show();
             this.Hide();
         }
+
+        private void personelAdTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
