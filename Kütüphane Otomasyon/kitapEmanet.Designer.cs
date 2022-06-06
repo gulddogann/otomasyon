@@ -32,7 +32,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.idTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,19 +46,19 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.adTxt = new System.Windows.Forms.TextBox();
+            this.yayinTxt = new System.Windows.Forms.TextBox();
+            this.sayfaTxt = new System.Windows.Forms.TextBox();
+            this.durumTxt = new System.Windows.Forms.TextBox();
+            this.katTxt = new System.Windows.Forms.TextBox();
+            this.dilTxt = new System.Windows.Forms.TextBox();
+            this.yazarTxt = new System.Windows.Forms.TextBox();
+            this.cevirmenTxt = new System.Windows.Forms.TextBox();
+            this.editorTxt = new System.Windows.Forms.TextBox();
+            this.rafTxt = new System.Windows.Forms.TextBox();
+            this.sutunTxt = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.eklentarTxt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,13 +94,13 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // idTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.idTxt.Location = new System.Drawing.Point(133, 25);
+            this.idTxt.Name = "idTxt";
+            this.idTxt.Size = new System.Drawing.Size(125, 27);
+            this.idTxt.TabIndex = 21;
+            this.idTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -232,82 +232,82 @@
             this.label13.TabIndex = 34;
             this.label13.Text = "Sütun";
             // 
-            // textBox2
+            // adTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(133, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 35;
+            this.adTxt.Location = new System.Drawing.Point(133, 71);
+            this.adTxt.Name = "adTxt";
+            this.adTxt.Size = new System.Drawing.Size(125, 27);
+            this.adTxt.TabIndex = 35;
             // 
-            // textBox3
+            // yayinTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(133, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 36;
+            this.yayinTxt.Location = new System.Drawing.Point(133, 117);
+            this.yayinTxt.Name = "yayinTxt";
+            this.yayinTxt.Size = new System.Drawing.Size(125, 27);
+            this.yayinTxt.TabIndex = 36;
             // 
-            // textBox4
+            // sayfaTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(133, 163);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 27);
-            this.textBox4.TabIndex = 37;
+            this.sayfaTxt.Location = new System.Drawing.Point(133, 163);
+            this.sayfaTxt.Name = "sayfaTxt";
+            this.sayfaTxt.Size = new System.Drawing.Size(125, 27);
+            this.sayfaTxt.TabIndex = 37;
             // 
-            // textBox6
+            // durumTxt
             // 
-            this.textBox6.Location = new System.Drawing.Point(133, 209);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 27);
-            this.textBox6.TabIndex = 39;
+            this.durumTxt.Location = new System.Drawing.Point(133, 209);
+            this.durumTxt.Name = "durumTxt";
+            this.durumTxt.Size = new System.Drawing.Size(125, 27);
+            this.durumTxt.TabIndex = 39;
             // 
-            // textBox7
+            // katTxt
             // 
-            this.textBox7.Location = new System.Drawing.Point(133, 255);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(125, 27);
-            this.textBox7.TabIndex = 40;
+            this.katTxt.Location = new System.Drawing.Point(133, 255);
+            this.katTxt.Name = "katTxt";
+            this.katTxt.Size = new System.Drawing.Size(125, 27);
+            this.katTxt.TabIndex = 40;
             // 
-            // textBox8
+            // dilTxt
             // 
-            this.textBox8.Location = new System.Drawing.Point(291, 25);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(125, 27);
-            this.textBox8.TabIndex = 41;
+            this.dilTxt.Location = new System.Drawing.Point(291, 25);
+            this.dilTxt.Name = "dilTxt";
+            this.dilTxt.Size = new System.Drawing.Size(125, 27);
+            this.dilTxt.TabIndex = 41;
             // 
-            // textBox9
+            // yazarTxt
             // 
-            this.textBox9.Location = new System.Drawing.Point(291, 72);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(125, 27);
-            this.textBox9.TabIndex = 42;
+            this.yazarTxt.Location = new System.Drawing.Point(291, 72);
+            this.yazarTxt.Name = "yazarTxt";
+            this.yazarTxt.Size = new System.Drawing.Size(125, 27);
+            this.yazarTxt.TabIndex = 42;
             // 
-            // textBox10
+            // cevirmenTxt
             // 
-            this.textBox10.Location = new System.Drawing.Point(291, 119);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(125, 27);
-            this.textBox10.TabIndex = 43;
+            this.cevirmenTxt.Location = new System.Drawing.Point(291, 119);
+            this.cevirmenTxt.Name = "cevirmenTxt";
+            this.cevirmenTxt.Size = new System.Drawing.Size(125, 27);
+            this.cevirmenTxt.TabIndex = 43;
             // 
-            // textBox11
+            // editorTxt
             // 
-            this.textBox11.Location = new System.Drawing.Point(291, 166);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(125, 27);
-            this.textBox11.TabIndex = 44;
+            this.editorTxt.Location = new System.Drawing.Point(291, 166);
+            this.editorTxt.Name = "editorTxt";
+            this.editorTxt.Size = new System.Drawing.Size(125, 27);
+            this.editorTxt.TabIndex = 44;
             // 
-            // textBox12
+            // rafTxt
             // 
-            this.textBox12.Location = new System.Drawing.Point(291, 213);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(125, 27);
-            this.textBox12.TabIndex = 45;
+            this.rafTxt.Location = new System.Drawing.Point(291, 213);
+            this.rafTxt.Name = "rafTxt";
+            this.rafTxt.Size = new System.Drawing.Size(125, 27);
+            this.rafTxt.TabIndex = 45;
             // 
-            // textBox13
+            // sutunTxt
             // 
-            this.textBox13.Location = new System.Drawing.Point(291, 260);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(125, 27);
-            this.textBox13.TabIndex = 46;
+            this.sutunTxt.Location = new System.Drawing.Point(291, 260);
+            this.sutunTxt.Name = "sutunTxt";
+            this.sutunTxt.Size = new System.Drawing.Size(125, 27);
+            this.sutunTxt.TabIndex = 46;
             // 
             // contextMenuStrip1
             // 
@@ -315,12 +315,12 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dateTimePicker1
+            // eklentarTxt
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(220, 317);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(266, 27);
-            this.dateTimePicker1.TabIndex = 48;
+            this.eklentarTxt.Location = new System.Drawing.Point(220, 317);
+            this.eklentarTxt.Name = "eklentarTxt";
+            this.eklentarTxt.Size = new System.Drawing.Size(266, 27);
+            this.eklentarTxt.TabIndex = 48;
             // 
             // kitapEmanet
             // 
@@ -328,18 +328,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 451);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.eklentarTxt);
+            this.Controls.Add(this.sutunTxt);
+            this.Controls.Add(this.rafTxt);
+            this.Controls.Add(this.editorTxt);
+            this.Controls.Add(this.cevirmenTxt);
+            this.Controls.Add(this.yazarTxt);
+            this.Controls.Add(this.dilTxt);
+            this.Controls.Add(this.katTxt);
+            this.Controls.Add(this.durumTxt);
+            this.Controls.Add(this.sayfaTxt);
+            this.Controls.Add(this.yayinTxt);
+            this.Controls.Add(this.adTxt);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -353,7 +353,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.idTxt);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -372,7 +372,7 @@
         private DataGridView dataGridView1;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
+        private TextBox idTxt;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -386,18 +386,18 @@
         private Label label11;
         private Label label12;
         private Label label13;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
+        private TextBox adTxt;
+        private TextBox yayinTxt;
+        private TextBox sayfaTxt;
+        private TextBox durumTxt;
+        private TextBox katTxt;
+        private TextBox dilTxt;
+        private TextBox yazarTxt;
+        private TextBox cevirmenTxt;
+        private TextBox editorTxt;
+        private TextBox rafTxt;
+        private TextBox sutunTxt;
         private ContextMenuStrip contextMenuStrip1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker eklentarTxt;
     }
 }
