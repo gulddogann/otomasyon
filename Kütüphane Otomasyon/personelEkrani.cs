@@ -103,6 +103,12 @@ namespace Kütüphane_Otomasyon
                 adapter.Fill(dts);
                 dataGridView4.DataSource = dts.Tables[0];
 
+                MySqlCommand commandd = new MySqlCommand("select Ogrenci.ogrid,Ogrenci.ograd,Ogrenci.ogrsoyad,Ogrenci.ogrtel,Ogrenci.ogrposta,Ogrenci.meslek,Ogrenci.ogrbolumad,Kitap.kitapid,Kitap.kitapadi,Kitap.rafno,Kitap.sutun from OgrenciKitap inner join Ogrenci on OgrenciKitap.ogrid=Ogrenci.ogrid inner join Kitap on Kitap.kitapid=OgrenciKitap.kitapid where gün<" + Convert.ToInt32(teslimDtp.Value.Day) + " and kitapdurum=1 and yıl=" + Convert.ToInt32(teslimDtp.Value.Year) + " and ay=" + Convert.ToInt32(teslimDtp.Value.Month) + "", baglanti.Baglan());
+                MySqlDataAdapter adapterr = new MySqlDataAdapter(command);
+                DataSet data = new DataSet();
+                adapterr.Fill(data);
+                dataGridView5.DataSource = data.Tables[0];
+
             }
             catch (System.TimeoutException)
             {

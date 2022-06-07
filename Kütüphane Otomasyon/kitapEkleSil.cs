@@ -47,17 +47,17 @@ namespace Kütüphane_Otomasyon
                     {
                         MySqlCommand cmd = new MySqlCommand("insert into Kitap (kitapid,kitapadi,yayinadi,sayfasayisi,kutupektarihi,dil,yazar,cevirmen,editor,rafno,sutun,kategori,kitapdurum)values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p13,@p14)", baglanti.Baglan());
                         cmd.Parameters.AddWithValue("@p1", Convert.ToInt32(kitapNoTxt.Text));
-                        cmd.Parameters.AddWithValue("@p2", (kitapAdiTxt.Text));
-                        cmd.Parameters.AddWithValue("@p3", (yayinAdiTxt.Text));
-                        cmd.Parameters.AddWithValue("@p4", (sayfaSayisi.Text));
+                        cmd.Parameters.AddWithValue("@p2", (kitapAdiTxt.Text.ToLower()));
+                        cmd.Parameters.AddWithValue("@p3", (yayinAdiTxt.Text.ToLower()));
+                        cmd.Parameters.AddWithValue("@p4", (sayfaSayisi.Text.ToLower()));
                         cmd.Parameters.AddWithValue("@p5", (ekTarTxt.Value));
-                        cmd.Parameters.AddWithValue("@p6", (dilTxt.Text));
-                        cmd.Parameters.AddWithValue("@p7", (yazarTxt.Text));
-                        cmd.Parameters.AddWithValue("@p8", (cevirmenTxt.Text));
-                        cmd.Parameters.AddWithValue("@p9", (editorTxt.Text));
-                        cmd.Parameters.AddWithValue("@p10", (rafNoTxt.Text));
-                        cmd.Parameters.AddWithValue("@p11", (sutunTxt.Text));
-                        cmd.Parameters.AddWithValue("@p13", (kategoriTxt.Text));
+                        cmd.Parameters.AddWithValue("@p6", (dilTxt.Text.ToLower()));
+                        cmd.Parameters.AddWithValue("@p7", (yazarTxt.Text.ToLower()));
+                        cmd.Parameters.AddWithValue("@p8", (cevirmenTxt.Text.ToLower()));
+                        cmd.Parameters.AddWithValue("@p9", (editorTxt.Text.ToLower()));
+                        cmd.Parameters.AddWithValue("@p10", (Convert.ToInt32(rafNoTxt.Text)));
+                        cmd.Parameters.AddWithValue("@p11", (Convert.ToInt32(sutunTxt.Text)));
+                        cmd.Parameters.AddWithValue("@p13", (kategoriTxt.Text.ToLower()));
                         cmd.Parameters.AddWithValue("@p14", (0));
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("kitap eklendi");
