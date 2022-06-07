@@ -1,5 +1,6 @@
 ## Kütüphane Otomasyonu
-Proje Tanımı ve Amacımız:
+
+# Proje Tanımı ve Amacımız:
 Söz konusu Kütüphane Otomasyonu Projesi GT2MTE ekibi tarafından tasarlanacak olup, Uludağ Üniversitesi İnegöl Fakültesi ve İnegöl Meslek Yüksek Okulu Kütüphanelerinde Genel-Geçer işlevleri ve bu işlevlerinde ötesinde bir çok işlevi yerine getirebilecek seviyede bir proje olacaktır.
 Kütüphane Genel-Geçer işlevleri aşağıda tanımlanmıştır;
 
@@ -17,19 +18,14 @@ GT2MTE ekibi tarafından tasarlanan Kütüphane Otomasyonu Projesi ile Yeni Nesi
 
 Genel-Geçer işlevlerin Ötesi işlevler aşağıda tanımlanmıştır;
 
-- Kullanıcı tarafından Kitapların konumuna göre aranması
-- Kullanıcı tarafından Kitapların Kategoriye göre aranması
-- Otomasyon tarafından Kullanıcıya konumuna göre Kitap önerilmesi
-- Otomasyon tarafından Kullanıcıya kategoriye göre Kitap önerilmesi
+- Personel tarafından Kitapların konumuna göre aranması
+- Personel tarafından Kitapların Kategoriye göre aranması
 - Personel tarafından yasaklı yayınların kısa sürede kaldırılması
 - Personel tarafından çeşitli Raporların incelenmesi
-- Personel tarafından, emanet altındaki kitapların gerekli görüldüğünde Kullanıcıya verilen sürenin uzatılması
 - Personel tarafından, emanet altında olan ancak teslim edilmeyen kitapların teslim alınması
-- Personel tarafından, emanet altında olan ancak teslim edilmeyen kitapların sahiplerine yaptırım uygulanması
-- Öğrenci İşleri tarafından emanet altında olan ancak teslim edilmeyen kitapların sahiplerine yaptırım uygulanması
 
 
-Bu tür işlevler; Kullanıcı,Otomasyon ve Personel arasında olacağından, COVID-19 salgınının sebep olduğu tehlikeler en aza indirgenecek olup Geleceğimizdeki diğer olası salgınlara karşı tedbir almakta ve Kütüphane sürecinin daha hızlı ve etkili olmasını sağlayacaktır.
+Bu tür işlevler ile Otomasyon programı daha etkili ve faydalı çalışacak ve Personel ile Öğrencinin Kütüphane işlerini kolaylaştıracaktır
 
 
 **NOT:** Kütüphane Kullanıcıları genellikle Öğrencilerden oluştuğundan Proje Öğrenciye yönelik oluşturulmaktadır ancak Akademisyenlerin ve diğer Personellerinde Kütüphaneyi kullanabileceklerinden Uygulamanın ve kullanılacak veri tablolarının kapsamı genişletilebilir olmalıdır, GT2MTE ekibi olarak uygulamamızı ölçeklendirilebilir/Kapsamı genişletilebilir yapmaya özen göstereceğiz ancak önceliğimiz bizden beklenen yani Öğrenciye Yönelik Kütüphane Otomasyonu Projesini geliştirmek olacaktır, Akademisyen ve Personele Yönelik Kütüphane Otomasyonu Projesi bizden beklenen projeye yani Öğrenciye Yönelik Kütüphane Otomasyonuna sonradan entegre edilecektir.
@@ -42,5 +38,59 @@ Bu proje sürecinde **Windows 10** ve **Windows 11** türü İşletim Sistemleri
 Söz konusu Yazılımlarda ise **C# programlama dili** ve **MySql veri sorgulama dili** kullanılacaktır.
 Kodlar, Github Desktop programı ile Github.com a push edilerek gönderilecektir
 Proje süreci Github.com dan sağlanacak olup, süreç 4 kişi arasında görev dağılımı ile paylaşılacaktır.
+
+PhpMyAdmin Veritabanı Yönetim Yazılımı üzerinde yazılacak MySQL veri sorgulama dili ile aşağıdaki veritabanı ve veritabanları tanımlanacaktır.
+**Veri Tabanı Adı**
+- GT2MTE
+
+**Tablolar**
+- Personel
+- Üye
+- ÜyeKitap(Emanet tablosu)
+- Kitap
+
+**Üye Tablo ile Kütüphane ana kullanıcılarının yani Üyelerin**
+-	Üye ID
+-	Üye Ad
+-	Üye Soyad
+-	Üye Telefon numarası
+-	Üye e-postası
+-	Öğrenci Bölüm bilgisi
+-	Meslek
+
+**Kitap Tablo ile Kitapların**
+-	Kitap ISBN
+-	Kitap Ad
+-	Kitap Yayınevi
+-	Kitap dili
+-	Kitap Yazarı
+-	Kitap Çevirmeni
+-	Kitap Editörü
+-	Kitap Sayfa Sayısı
+-	Kitap rafno
+-	Kitap sütunno
+-	Kitap Kategori
+-	Emanet durumu
+-	Kütüphaneye eklenme tarihi
+
+**Personel Tablo ile Personellerin**
+- Personel ID
+- Personel Ad
+- Personel Soyad
+- Personel telno
+- Personel Eposta
+- Personel Şifre
+
+**ÖğrenciKitap Tablosu ile Emanet verilen Kitapların**
+- ISBN
+- Üye ID
+- Verilen tarih
+- Alınan Tarih
+
+Bilgileri tutulmuştur
+
+## Form Tasarımı
+Her işlev için Form Ekranı tasarlanmış olup Arka Plan rengi DarkSlate Gray rengi iken işlevler için tasarlanmış Groupboxların arka plan rengi ColorLightLight dır.
+GroupBox lardaki labeller için renk ColorText olup Form Ekranı labelleri için renk Orange(Turuncu) rengidir ve her Formda Uludağ Üniversitesi resmi logosu kullanılmıştır
 
 ## Ekran Görüntüleri
