@@ -94,42 +94,44 @@ Her işlev için Form Ekranı tasarlanmış olup Arka Plan rengi DarkSlate Gray 
 GroupBox lardaki labeller için renk ColorText olup Form Ekranı labelleri için renk Orange(Turuncu) rengidir ve her Formda Uludağ Üniversitesi resmi logosu kullanılmıştır
 
 ## Ekran Görüntüleri
-![Giriş Ekranı](https://user-images.githubusercontent.com/102298378/172700324-d21117db-3f0d-41c8-b8fb-c4d5ad965559.jpeg)
 
 Giriş Ekranı
 
-![personel kayıt ekranı](https://user-images.githubusercontent.com/102298378/172700639-f4f2bbb1-154a-4925-b331-5819b813a5d1.jpeg)
+![Giriş Ekranı](https://user-images.githubusercontent.com/102298378/172700324-d21117db-3f0d-41c8-b8fb-c4d5ad965559.jpeg)
 
 Personel Kayıt Ekranı
 
-![şifremi unuttum ekranı](https://user-images.githubusercontent.com/102298378/172701447-981afbcf-67f4-466f-9d8c-fb729e4cb787.jpeg)
+![personel kayıt ekranı](https://user-images.githubusercontent.com/102298378/172700639-f4f2bbb1-154a-4925-b331-5819b813a5d1.jpeg)
 
 Şifremi Unuttum Ekranı
 
-![personel ana ekran](https://user-images.githubusercontent.com/102298378/172705444-769a507b-b9a6-4c88-9bdd-cd5afd5195c8.png)
+![şifremi unuttum ekranı](https://user-images.githubusercontent.com/102298378/172701447-981afbcf-67f4-466f-9d8c-fb729e4cb787.jpeg)
 
 Ana Ekran
 
-![üye kayıt ve sil](https://user-images.githubusercontent.com/102298378/172701960-4a99e0d6-6422-435c-b277-174b8cc0a32e.jpeg)
+![personel ana ekran](https://user-images.githubusercontent.com/102298378/172705444-769a507b-b9a6-4c88-9bdd-cd5afd5195c8.png)
 
 Üye Kayıt-Sil Ekranı
 
-![kitap alış-veriş ekranı](https://user-images.githubusercontent.com/102298378/172702540-85bf16b9-7c65-4979-a917-5733293928ee.jpeg)
+![üye kayıt ve sil](https://user-images.githubusercontent.com/102298378/172701960-4a99e0d6-6422-435c-b277-174b8cc0a32e.jpeg)
 
 Kitap Alış-Veriş Ekranı
 
-![kitap ekle sil](https://user-images.githubusercontent.com/102298378/172702998-d0905941-7a97-411b-b6b6-9ef3a1853bb0.jpeg)
+![kitap alış-veriş ekranı](https://user-images.githubusercontent.com/102298378/172702540-85bf16b9-7c65-4979-a917-5733293928ee.jpeg)
 
 Kitap Ekle-Sil Ekranı
 
-![arama ekranı](https://user-images.githubusercontent.com/102298378/172703306-d7140d54-c246-4a78-9918-30cf7ad0c46c.jpeg)
+![kitap ekle sil](https://user-images.githubusercontent.com/102298378/172702998-d0905941-7a97-411b-b6b6-9ef3a1853bb0.jpeg)
 
 Arama Ekranı
 
-![kitap güncelleme](https://user-images.githubusercontent.com/102298378/172703563-aa247869-88d7-47c8-a60f-59a3c39cf7c9.jpeg)
+![arama ekranı](https://user-images.githubusercontent.com/102298378/172703306-d7140d54-c246-4a78-9918-30cf7ad0c46c.jpeg)
 
 Kitap Güncelleme Ekranı
 
-![rapor ekranı](https://user-images.githubusercontent.com/102298378/172703747-d3e64cba-ae89-492e-a950-e956a044730b.jpeg)
+![kitap güncelleme](https://user-images.githubusercontent.com/102298378/172703563-aa247869-88d7-47c8-a60f-59a3c39cf7c9.jpeg)
 
 Rapor-İstatistik Ekranı
+
+![rapor ekranı](https://user-images.githubusercontent.com/102298378/172703747-d3e64cba-ae89-492e-a950-e956a044730b.jpeg)
+
