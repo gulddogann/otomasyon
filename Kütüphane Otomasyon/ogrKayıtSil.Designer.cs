@@ -158,6 +158,7 @@
             this.bolumadTxt.Name = "bolumadTxt";
             this.bolumadTxt.Size = new System.Drawing.Size(121, 23);
             this.bolumadTxt.TabIndex = 31;
+            this.bolumadTxt.Visible = false;
             this.bolumadTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bolumadTxt_KeyPress);
             // 
             // telefonTxt
@@ -180,6 +181,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(122, 23);
             this.comboBox1.TabIndex = 33;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -250,6 +252,7 @@
             this.label14.Size = new System.Drawing.Size(87, 15);
             this.label14.TabIndex = 40;
             this.label14.Text = "Öğrenci Bölüm";
+            this.label14.Visible = false;
             // 
             // label13
             // 

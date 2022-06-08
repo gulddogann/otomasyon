@@ -48,43 +48,41 @@ namespace Kütüphane_Otomasyon
             {
                 MessageBox.Show("Eposta eposta türünü içeremez!", "UYARI", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information);
             }
-            if (comboBox1.SelectedIndex == 1 || comboBox1.SelectedIndex == 2)
-            {
-                bolumadTxt.Text = "";
-            }
+            //if (comboBox1.SelectedIndex == 1 || comboBox1.SelectedIndex == 2)
+            //{
+            //bolumadTxt.Text = "";
+            //}
 
             else
             {
                 try
                 {
-                    MySqlCommand command = new MySqlCommand("select * from Ogrenci where ogrtel=@p3", baglanti.Baglan());
+                    MySqlCommand command = new MySqlCommand("select * from Ogrenci where ogrtel=@p3 and ogrid=@p1", baglanti.Baglan());
                     command.Parameters.AddWithValue("@p3", telefonTxt.Text);
+                    command.Parameters.AddWithValue("@p1", Convert.ToInt32(ogrNoTxt.Text));
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        if (telefonTxt.Text == reader["ogrtel"].ToString())
+                        if (telefonTxt.Text == reader["ogrtel"].ToString() || ogrNoTxt.Text == reader["ogrid"].ToString())
                         {
                             MessageBox.Show("Üye zaten Kaydedilmiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
                         }
-                        else
-                        { 
-                            string eposta = eposbir.Text + eposiki.Text;
+                    }
+                    string eposta = eposbir.Text + eposiki.Text;
 
-                            MySqlCommand cmd = new MySqlCommand("insert into Ogrenci (ogrid,ograd,ogrsoyad,ogrposta,ogrbolumad,ogrtel,meslek) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", baglanti.Baglan());
+                    MySqlCommand cmd = new MySqlCommand("insert into Ogrenci (ogrid,ograd,ogrsoyad,ogrposta,ogrbolumad,ogrtel,meslek) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", baglanti.Baglan());
 
-                            cmd.Parameters.AddWithValue("@p1", (Convert.ToInt32(ogrNoTxt.Text)));
-                            cmd.Parameters.AddWithValue("@p2", (adTxt.Text));
-                            cmd.Parameters.AddWithValue("@p3", (soyadTxt.Text));
-                            cmd.Parameters.AddWithValue("@p4", (eposta));
-                            cmd.Parameters.AddWithValue("@p5", (bolumadTxt.Text));
-                            cmd.Parameters.AddWithValue("@p6", (telefonTxt.Text));
-                            cmd.Parameters.AddWithValue("@p7", (comboBox1.Text));
+                    cmd.Parameters.AddWithValue("@p1", (Convert.ToInt32(ogrNoTxt.Text)));
+                    cmd.Parameters.AddWithValue("@p2", (adTxt.Text));
+                    cmd.Parameters.AddWithValue("@p3", (soyadTxt.Text));
+                    cmd.Parameters.AddWithValue("@p4", (eposta));
+                    cmd.Parameters.AddWithValue("@p5", (bolumadTxt.Text));
+                    cmd.Parameters.AddWithValue("@p6", (telefonTxt.Text));
+                    cmd.Parameters.AddWithValue("@p7", (comboBox1.Text));
 
-                            cmd.ExecuteNonQuery();
-                            MessageBox.Show("Üye eklendi");
-                            ogrtablo();
-                        }
-                    }                
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Üye eklendi");
+                    ogrtablo();
                 }
                 catch (System.TimeoutException)
                 {
@@ -193,6 +191,25 @@ namespace Kütüphane_Otomasyon
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                  && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(comboBox1.SelectedIndex)
+            {
+                case 0:
+                    label14.Visible = true;
+                    bolumadTxt.Visible = true;
+                    break;
+                case 1: 
+                    label14.Visible = false;
+                    bolumadTxt.Visible = false;
+                    break;
+                case 2:
+                    label14.Visible = false;
+                    bolumadTxt.Visible = false;
+                    break;
+            }
         }
     }
     }

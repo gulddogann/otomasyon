@@ -50,8 +50,8 @@ namespace Kütüphane_Otomasyon
                         {
                             MessageBox.Show("Üye zaten Kaydedilmiş", "UYARI!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
                         }
-                        else
-                        {
+                    }
+                    
                             MySqlCommand sqlCommand = new MySqlCommand("insert into Personel(personelad,personelsoyad,personeleposta,personeltelno,personelSifre,perid) VALUES (@p1,@p2,@p3,@p4,@p5,@p6)", baglanti.Baglan());
                             sqlCommand.Parameters.AddWithValue("@p1", perad.Text.ToLower());
                             sqlCommand.Parameters.AddWithValue("@p2", persoyad.Text.ToLower());
@@ -61,8 +61,8 @@ namespace Kütüphane_Otomasyon
                             sqlCommand.Parameters.AddWithValue("@p6", Convert.ToInt32(textBox1.Text));
                             sqlCommand.ExecuteNonQuery();
                             MessageBox.Show("Personel Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
+                        
+                    
                 }
                 catch (System.FormatException)
                 {

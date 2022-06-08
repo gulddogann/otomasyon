@@ -93,15 +93,15 @@
             this.button5.Location = new System.Drawing.Point(6, 154);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(117, 34);
+            this.button5.Size = new System.Drawing.Size(117, 45);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Kitap Ara";
+            this.button5.Text = "Kitap/Üye/Emanet Ara";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(6, 192);
+            this.button6.Location = new System.Drawing.Point(6, 203);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(117, 35);
@@ -112,10 +112,10 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(6, 231);
+            this.button7.Location = new System.Drawing.Point(6, 242);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(117, 36);
+            this.button7.Size = new System.Drawing.Size(117, 25);
             this.button7.TabIndex = 6;
             this.button7.Text = "Rapor ve İstatistik";
             this.button7.UseVisualStyleBackColor = true;
@@ -251,7 +251,7 @@
             // 
             // teslimDtp
             // 
-            this.teslimDtp.Location = new System.Drawing.Point(354, 175);
+            this.teslimDtp.Location = new System.Drawing.Point(1101, 168);
             this.teslimDtp.Name = "teslimDtp";
             this.teslimDtp.Size = new System.Drawing.Size(200, 23);
             this.teslimDtp.TabIndex = 32;

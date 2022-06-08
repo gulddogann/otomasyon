@@ -92,7 +92,7 @@ namespace Kütüphane_Otomasyon
 
         public void tablo()
         {
-            MySqlCommand cmd2 = new MySqlCommand("select distinct OgrenciKitap.ogrid,distinct OgrenciKitap.kitapid,OgrenciKitap.verilentarih,OgrenciKitap.alınantarih from Kitap inner join OgrenciKitap on Kitap.kitapid=OgrenciKitap.kitapid where Kitap.kitapdurum=1", baglanti.Baglan());
+            MySqlCommand cmd2 = new MySqlCommand("select OgrenciKitap.ogrid,OgrenciKitap.kitapid,OgrenciKitap.verilentarih,OgrenciKitap.alınantarih from Kitap inner join OgrenciKitap on Kitap.kitapid=OgrenciKitap.kitapid where Kitap.kitapdurum=1", baglanti.Baglan());
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd2);
             DataSet dts = new DataSet();
             adapter.Fill(dts);
