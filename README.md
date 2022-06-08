@@ -94,3 +94,6 @@ Her işlev için Form Ekranı tasarlanmış olup Arka Plan rengi DarkSlate Gray 
 GroupBox lardaki labeller için renk ColorText olup Form Ekranı labelleri için renk Orange(Turuncu) rengidir ve her Formda Uludağ Üniversitesi resmi logosu kullanılmıştır
 
 ## Ekran Görüntüleri
+
+![ana ekran](https://user-images.githubusercontent.com/102298378/172699442-acd14cce-e1f2-480a-8b20-472f8c3ae781.jpeg)
+Ana Ekran
