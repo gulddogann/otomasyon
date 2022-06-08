@@ -46,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.teslimDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -250,22 +249,12 @@
             this.dataGridView5.Size = new System.Drawing.Size(1368, 252);
             this.dataGridView5.TabIndex = 30;
             // 
-            // teslimDtp
-            // 
-            this.teslimDtp.Location = new System.Drawing.Point(1258, 224);
-            this.teslimDtp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.teslimDtp.Name = "teslimDtp";
-            this.teslimDtp.Size = new System.Drawing.Size(228, 27);
-            this.teslimDtp.TabIndex = 32;
-            this.teslimDtp.Visible = false;
-            // 
             // personelEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1398, 732);
-            this.Controls.Add(this.teslimDtp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.label3);
@@ -311,6 +300,5 @@
         private Label label3;
         private Label label4;
         private DataGridView dataGridView5;
-        private DateTimePicker teslimDtp;
     }
 }
