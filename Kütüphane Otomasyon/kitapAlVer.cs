@@ -66,7 +66,10 @@ namespace Kütüphane_Otomasyon
                     {
                         MessageBox.Show("Değerleri Doğru girdiğinizden emin olun", "UYARI", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     }
-
+                    catch(MySql.Data.MySqlClient.MySqlException)
+                    {
+                        MessageBox.Show("Üye Kayıt edilmemiş!","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
                 }
                 tablo();
 
@@ -82,6 +85,11 @@ namespace Kütüphane_Otomasyon
                 cmd1.Parameters.AddWithValue("@p1", Convert.ToInt32(kitapAdTxt.Text));
                 cmd1.Parameters.AddWithValue("@p2", Convert.ToInt32(ogrNoTxt.Text));
                 cmd1.ExecuteNonQuery();
+
+                MySqlCommand command = new MySqlCommand("delete from OgrenciKitap where ogrid=@p2 and kitapid=@p1", baglanti.Baglan());
+                command.Parameters.AddWithValue("@p1", Convert.ToInt32(kitapAdTxt.Text));
+                command.Parameters.AddWithValue("@p2", Convert.ToInt32(ogrNoTxt.Text));
+            command.ExecuteNonQuery();
                 MessageBox.Show("Kitap teslim alındı");
                 tablo();
             

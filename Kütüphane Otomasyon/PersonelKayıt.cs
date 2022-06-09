@@ -118,5 +118,18 @@ namespace Kütüphane_Otomasyon
             personel.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MySqlCommand command = new MySqlCommand("delete from Personel where perid=@p1",baglanti.Baglan());
+            command.Parameters.AddWithValue("@p1",Convert.ToInt32(textBox2.Text));
+            command.ExecuteNonQuery();
+            MessageBox.Show("Personel Silindi Bay bay Personel "+textBox2.Text+"","Bayyy",MessageBoxButtons.OK,MessageBoxIcon.Hand);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

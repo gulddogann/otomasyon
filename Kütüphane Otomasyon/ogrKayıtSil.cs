@@ -73,10 +73,10 @@ namespace Kütüphane_Otomasyon
                     MySqlCommand cmd = new MySqlCommand("insert into Ogrenci (ogrid,ograd,ogrsoyad,ogrposta,ogrbolumad,ogrtel,meslek) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", baglanti.Baglan());
 
                     cmd.Parameters.AddWithValue("@p1", (Convert.ToInt32(ogrNoTxt.Text)));
-                    cmd.Parameters.AddWithValue("@p2", (adTxt.Text));
-                    cmd.Parameters.AddWithValue("@p3", (soyadTxt.Text));
+                    cmd.Parameters.AddWithValue("@p2", (adTxt.Text.ToLower()));
+                    cmd.Parameters.AddWithValue("@p3", (soyadTxt.Text.ToLower()));
                     cmd.Parameters.AddWithValue("@p4", (eposta));
-                    cmd.Parameters.AddWithValue("@p5", (bolumadTxt.Text));
+                    cmd.Parameters.AddWithValue("@p5", (bolumadTxt.Text.ToLower()));
                     cmd.Parameters.AddWithValue("@p6", (telefonTxt.Text));
                     cmd.Parameters.AddWithValue("@p7", (comboBox1.Text));
 
@@ -137,6 +137,10 @@ namespace Kütüphane_Otomasyon
                 catch(System.TimeoutException)
                 {
                     MessageBox.Show("Okulun internetine bağlı olduğunuzdan emin olun","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                catch(MySql.Data.MySqlClient.MySqlException)
+                {
+                    MessageBox.Show("Üyenin üzerinde kitap olduğundan silemezsiniz!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
