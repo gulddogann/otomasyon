@@ -40,6 +40,7 @@ Kodlar, Github Desktop programı ile Github.com a push edilerek gönderilecektir
 Proje süreci Github.com dan sağlanacak olup, süreç 4 kişi arasında görev dağılımı ile paylaşılacaktır.
 
 PhpMyAdmin Veritabanı Yönetim Yazılımı üzerinde yazılacak MySQL veri sorgulama dili ile aşağıdaki veritabanı ve veritabanları tanımlanacaktır.
+
 **Veri Tabanı Adı**
 - GT2MTE
 
