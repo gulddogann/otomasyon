@@ -96,57 +96,55 @@ GroupBox lardaki labeller için renk ColorText olup Form Ekranı labelleri için
 
 ## Ekran Görüntüleri
 
-Giriş Ekranı
-
+**Giriş Ekranı**
 ![Giriş Ekranı](https://user-images.githubusercontent.com/102298378/172700324-d21117db-3f0d-41c8-b8fb-c4d5ad965559.jpeg)
 
-Personel giriş yapar eğer kayıtlı değilse kayıt ol ekraına gider.Şifresini unuttuysa şifremi unuttum ekaına gider.
+Personel giriş yapar eğer kayıtlı değilse kayıt ol ekranına gider.Şifresini unuttuysa şifremi unuttum ekranına gider.
 
-Personel Kayıt Ekranı
-
+**Personel Kayıt Ekranı**
 ![personel kayıt ekranı](https://user-images.githubusercontent.com/102298378/172700639-f4f2bbb1-154a-4925-b331-5819b813a5d1.jpeg)
 
 Personel kaydı yapılır eğer yanlışlıkla bu butona bastıysa iptal butonuyla giriş ekranına döner.
 
-Şifremi Unuttum Ekranı
-
+**Şifremi Unuttum Ekranı**
 ![şifremi unuttum ekranı](https://user-images.githubusercontent.com/102298378/172701447-981afbcf-67f4-466f-9d8c-fb729e4cb787.jpeg)
 
 Personel şifresini unuttuysa bilgilerini doldurup yeni şifre belirler.
 
-Ana Ekran
-
+**Ana Ekran**
 ![personel ana ekran](https://user-images.githubusercontent.com/102298378/172705444-769a507b-b9a6-4c88-9bdd-cd5afd5195c8.png)
 
 Personel yapabileceği bütün fonksiyonları bu ekranda görür ve istediği ekrana geçiş yapabilir.Ayrıca kayıtlı bilgileri görür.
 
-Üye Kayıt-Sil Ekranı
-
+**Üye Kayıt-Sil Ekranı**
 ![üye kayıt ve sil](https://user-images.githubusercontent.com/102298378/172701960-4a99e0d6-6422-435c-b277-174b8cc0a32e.jpeg)
 
 Üye bilgileri doldularak kayıt edilir.Kaydını sildirmek isteyen veya silinmesi gereken üyelerin kaydı silinir.
 
-Kitap Alış-Veriş Ekranı
-
+**Kitap Alış-Veriş Ekranı**
 ![kitap alış-veriş ekranı](https://user-images.githubusercontent.com/102298378/172702540-85bf16b9-7c65-4979-a917-5733293928ee.jpeg)
 
+Gerekli bilgiler doldurularak belirlenen sürede kitap emanet verilir ve belirlen sürede teslim alınır.Teslim tarihi gecikmiş kitapların bilgisi geç kalmış kitaplar panelinde görünür. 
 
-
-Kitap Ekle-Sil Ekranı
-
+**Kitap Ekle-Sil Ekranı**
 ![kitap ekle sil](https://user-images.githubusercontent.com/102298378/172702998-d0905941-7a97-411b-b6b6-9ef3a1853bb0.jpeg)
 
-Arama Ekranı
+Kitap bilgileri girilerek kitap eklenir.Eklenen kitaplar ekranda görünür.Kitap bilgileri girilerek kitap silme panelinde kaydı silinir.
 
+**Arama Ekranı**
 ![arama ekranı](https://user-images.githubusercontent.com/102298378/172703306-d7140d54-c246-4a78-9918-30cf7ad0c46c.jpeg)
 
-Kitap Güncelleme Ekranı
+Gerekli bilgilere ulaşmak için aranan özellikler girilir ve panelde görülür. 
 
+**Kitap Güncelleme Ekranı**
 ![kitap güncelleme](https://user-images.githubusercontent.com/102298378/172703563-aa247869-88d7-47c8-a60f-59a3c39cf7c9.jpeg)
 
-Rapor-İstatistik Ekranı
+Kitap bilgileri girilerek eksik veya yanlış bilgiler düzeltilir.
 
+**Rapor-İstatistik Ekranı**
 ![rapor ekranı](https://user-images.githubusercontent.com/102298378/172703747-d3e64cba-ae89-492e-a950-e956a044730b.jpeg)
+
+Rapor ve İstatistik ekranında son eklenen kitaplar,en çok kitap okuyan öğrenci,emanet altındaki kitaplar,en fazla sayfası olan kitaplar ve üyeler görünür.
 
 
 
