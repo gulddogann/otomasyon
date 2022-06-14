@@ -100,13 +100,19 @@ Giriş Ekranı
 
 ![Giriş Ekranı](https://user-images.githubusercontent.com/102298378/172700324-d21117db-3f0d-41c8-b8fb-c4d5ad965559.jpeg)
 
+Personel giriş yapar eğer kayıtlı değilse kayıt ol ekraına gider.
+
 Personel Kayıt Ekranı
 
 ![personel kayıt ekranı](https://user-images.githubusercontent.com/102298378/172700639-f4f2bbb1-154a-4925-b331-5819b813a5d1.jpeg)
 
+Personel kaydı yapılır eğer yanlışlıkla bu butona bastıysa iptal butonuyla giriş ekranına döner.
+
 Şifremi Unuttum Ekranı
 
 ![şifremi unuttum ekranı](https://user-images.githubusercontent.com/102298378/172701447-981afbcf-67f4-466f-9d8c-fb729e4cb787.jpeg)
+
+
 
 Ana Ekran
 
