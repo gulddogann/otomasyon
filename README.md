@@ -100,7 +100,7 @@ Giriş Ekranı
 
 ![Giriş Ekranı](https://user-images.githubusercontent.com/102298378/172700324-d21117db-3f0d-41c8-b8fb-c4d5ad965559.jpeg)
 
-Personel giriş yapar eğer kayıtlı değilse kayıt ol ekraına gider.
+Personel giriş yapar eğer kayıtlı değilse kayıt ol ekraına gider.Şifresini unuttuysa şifremi unuttum ekaına gider.
 
 Personel Kayıt Ekranı
 
@@ -112,19 +112,25 @@ Personel kaydı yapılır eğer yanlışlıkla bu butona bastıysa iptal butonuy
 
 ![şifremi unuttum ekranı](https://user-images.githubusercontent.com/102298378/172701447-981afbcf-67f4-466f-9d8c-fb729e4cb787.jpeg)
 
-
+Personel şifresini unuttuysa bilgilerini doldurup yeni şifre belirler.
 
 Ana Ekran
 
 ![personel ana ekran](https://user-images.githubusercontent.com/102298378/172705444-769a507b-b9a6-4c88-9bdd-cd5afd5195c8.png)
 
+Personel yapabileceği bütün fonksiyonları bu ekranda görür ve istediği ekrana geçiş yapabilir.Ayrıca kayıtlı bilgileri görür.
+
 Üye Kayıt-Sil Ekranı
 
 ![üye kayıt ve sil](https://user-images.githubusercontent.com/102298378/172701960-4a99e0d6-6422-435c-b277-174b8cc0a32e.jpeg)
 
+Üye bilgileri doldularak kayıt edilir.Kaydını sildirmek isteyen veya silinmesi gereken üyelerin kaydı silinir.
+
 Kitap Alış-Veriş Ekranı
 
 ![kitap alış-veriş ekranı](https://user-images.githubusercontent.com/102298378/172702540-85bf16b9-7c65-4979-a917-5733293928ee.jpeg)
+
+
 
 Kitap Ekle-Sil Ekranı
 
@@ -141,4 +147,6 @@ Kitap Güncelleme Ekranı
 Rapor-İstatistik Ekranı
 
 ![rapor ekranı](https://user-images.githubusercontent.com/102298378/172703747-d3e64cba-ae89-492e-a950-e956a044730b.jpeg)
+
+
 
