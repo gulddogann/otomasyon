@@ -35,14 +35,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,18 +78,18 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(22, 244);
+            this.dataGridView2.Location = new System.Drawing.Point(475, 38);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(874, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(395, 150);
             this.dataGridView2.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(24, 214);
+            this.label2.Location = new System.Drawing.Point(475, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 15);
             this.label2.TabIndex = 4;
@@ -100,7 +98,7 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(22, 433);
+            this.dataGridView3.Location = new System.Drawing.Point(24, 274);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 25;
@@ -111,21 +109,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(22, 409);
+            this.label3.Location = new System.Drawing.Point(24, 224);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 15);
+            this.label3.Size = new System.Drawing.Size(159, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "En fazla Sayfası olan Kitap";
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(500, 38);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 25;
-            this.dataGridView4.Size = new System.Drawing.Size(395, 150);
-            this.dataGridView4.TabIndex = 7;
+            this.label3.Text = "En Fazla Sayfası Olan Kitaplar";
             // 
             // label4
             // 
@@ -133,14 +121,13 @@
             this.label4.ForeColor = System.Drawing.Color.Orange;
             this.label4.Location = new System.Drawing.Point(533, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 15);
+            this.label4.Size = new System.Drawing.Size(0, 15);
             this.label4.TabIndex = 8;
-            this.label4.Text = "En çok sayfası olan Kitabı okuyan Öğrenci";
             // 
             // dataGridView5
             // 
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(500, 433);
+            this.dataGridView5.Location = new System.Drawing.Point(475, 274);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 25;
@@ -151,11 +138,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Orange;
-            this.label5.Location = new System.Drawing.Point(500, 409);
+            this.label5.Location = new System.Drawing.Point(475, 224);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 15);
+            this.label5.Size = new System.Drawing.Size(156, 15);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Öğrenciler";
+            this.label5.Text = "En Çok Tercih Edilen Kitaplar";
             // 
             // Rapor
             // 
@@ -166,7 +153,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.label2);
@@ -181,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,7 +182,6 @@
         private Label label2;
         private DataGridView dataGridView3;
         private Label label3;
-        private DataGridView dataGridView4;
         private Label label4;
         private DataGridView dataGridView5;
         private Label label5;
